@@ -1,3 +1,7 @@
+import './StartPage.css'
+
 export default function StartPage() {
-  return <h1>Welcome!</h1>
+  return <div className="main_container">
+    <h1 className="main_text">Phonehub!<br></br><span>”Connect with the world”</span></h1>
+  </div>
 }
