@@ -1,5 +1,5 @@
 import { useStates } from './utilities/states';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { add } from './utilities/shoppingCartLogic';
 
@@ -30,7 +30,7 @@ export default function ProductDetail() {
 
   return <Container className="productList">
     <Row><Col>
-      <Link to={`/`}>
+      <Link to={`/product-list`}>
         <button type="button" className="my-4 btn btn-primary">Back to list</button>
         <hr />
       </Link>
