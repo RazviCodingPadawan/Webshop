@@ -5,6 +5,7 @@ import { scrollRestore } from './utilities/scrollBehavior';
 import CategorySelect from './CategorySelect';
 import { sweFormat } from './utilities/currencyFormatter';
 import { missingImage } from './utilities/handleMissingImage';
+import './ProductList.css'
 
 export default function ProductList() {
 
