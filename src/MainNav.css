@@ -5,12 +5,24 @@
     width: 100%;
     position: absolute;
     top: 2%;
-    left: 2%;
+    left: 0;
+}
+
+.main_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar-brand {
     font-size: 2rem;
-    margin-left: 20px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30%;
 }
 
 .cart {
@@ -37,11 +49,12 @@
     color: #208077;
 }
 
-.about,
+.hem,
 .products {
     padding: 15px 10px;
-    margin: 10px;
+    margin: 30px;
 }
+
 
 .navbar-light .navbar-nav .nav-link {
     color: #3a3a3a;
