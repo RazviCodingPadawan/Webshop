@@ -19,7 +19,7 @@ export default function ProductList() {
   }
 
   return <Container className="productList">
-    <Row><Col><h1>Products</h1></Col></Row>
+    <Row><Col><h1>Produkter</h1></Col></Row>
     <Row className="mb-3"><Col><CategorySelect showAllOption bindTo={[s, 'chosenCategoryId']} /></Col></Row>
     {s.products.filter(product =>
       s.chosenCategoryId === 0 /*all*/
@@ -33,7 +33,7 @@ export default function ProductList() {
             <p>{description}</p>
           </Col>
           <Col xxl="12">
-            <p><b>Price:</b> {sweFormat(price)}</p>
+            <p><b>Pris:</b> {sweFormat(price)}</p>
           </Col>
         </Card>
       </Row>

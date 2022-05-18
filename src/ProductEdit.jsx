@@ -45,6 +45,6 @@ export default function ProductDetail() {
         <CategorySelect bindTo={[product, 'categoryId']} />
       </label>
     </Col></Row>
-    <button type="button" onClick={save} className="my-4 btn btn-primary float-end">Save</button>
+    <button type="button" onClick={save} className="my-4 btn btn-primary float-end">Spara</button>
   </Container>
 }
