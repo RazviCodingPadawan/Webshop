@@ -45,7 +45,7 @@ export default function ProductDetail() {
   return <Container className="productList">
     <Row><Col>
       <Link to={`/product-list`}>
-        <button type="button" className="my-4 btn btn-primary">Back to list</button>
+        <button type="button" className="my-4 btn btn-primary">Tillbaka till listan</button>
         <hr />
       </Link>
     </Col></Row>
@@ -55,14 +55,14 @@ export default function ProductDetail() {
       <img onError={event => missingImage(event, name)} className="float-end ms-3" style={{ width: 250, height: 150, objectFit: 'cover' }} src={`/images/products/${id}.jpg`} />
       <p>{description}</p>
     </Col></Row>
-    <Row><Col><p>Price: {sweFormat(price)}</p></Col></Row>
+    <Row><Col><p>Pris: {sweFormat(price)}</p></Col></Row>
     <Row><Col>
       <Link to={`/product-edit/${id}`}>
         <button type="button" className="my-4 btn btn-primary float-end">Edit</button>
       </Link>
     </Col></Row>
     <Row><Col className="mt-2">
-      <button type="button" onClick={buy} className="btn btn-primary float-end">Buy</button>
+      <button type="button" onClick={buy} className="btn btn-primary float-end">Köp</button>
       <input style={{ width: 100 }} className="float-end mt-1 me-3" type="number" {...localState.bind('buyQuantity')} />
     </Col></Row>
   </Container>

@@ -4,7 +4,7 @@ import './Welcome.css'
 export default function Welcome() {
   return (
     <div className="main_container">
-       <h1>WELCOME!</h1>
+       <h1>Välkommen!</h1>
     </div>
   )
 }
