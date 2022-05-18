@@ -1,7 +1,10 @@
 import React from 'react'
+import './Welcome.css'
 
 export default function Welcome() {
   return (
-    <div>Welcome</div>
+    <div className="main_container">
+       <h1>WELCOME!</h1>
+    </div>
   )
 }

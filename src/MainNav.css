@@ -1,0 +1,66 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 2%;
+    left: 0;
+}
+
+.main_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30%;
+}
+
+.cart {
+    padding: 20px 20px;
+    margin: 20px;
+    background: #fff;
+    border: none;
+    border-radius: 3px;
+    color: #208077;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: -1px -1px 10px  rgba(63, 193, 183, 0.7),
+    3px 3px 20px  rgba(0, 0, 0, 0.2);
+}
+
+.cart:hover {
+    box-shadow: inset -1px -1px 20px rgba(63, 193, 183, 0.7),
+    inset 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link .welcome {
+    color: #208077;
+}
+
+.hem,
+.products {
+    padding: 15px 10px;
+    margin: 30px;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+    color: #3a3a3a;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #669590;
+}
