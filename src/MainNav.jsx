@@ -18,7 +18,7 @@ export default function MainNav() {
           <Link className="nav-link hem" to="/">Hem</Link>
           <Link className="nav-link products" to="/product-list">Produkter</Link>
         </Nav>
-        <Link className="nav-link" to="/shopping-cart"><button className="cart">Shopping vagn</button></Link>
+        <Link className="nav-link" to="/shopping-cart"><button className="cart">🛒</button></Link>
       </Navbar.Collapse>
     </Container>
   </Navbar>
