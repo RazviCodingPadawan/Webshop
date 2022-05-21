@@ -44,7 +44,7 @@ export default function ShoppingCart() {
               <td className="text-end" style={{ width: 100 }}>{sweFormat(row.quantity * row.product.price)}</td>
             </tr>)}
             <tr className="fw-bold">
-              <td>Sum</td>
+              <td>Totalt</td>
               <td colSpan={4} className="text-end">
                 {sweFormat(totalSum)}
               </td>

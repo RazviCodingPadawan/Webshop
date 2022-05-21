@@ -58,7 +58,7 @@ export default function ProductDetail() {
     <Row><Col><p>Pris: {sweFormat(price)}</p></Col></Row>
     <Row><Col>
       <Link to={`/product-edit/${id}`}>
-        <button type="button" className="my-4 btn btn-primary float-end">Edit</button>
+        <button type="button" className="my-4 btn btn-primary float-end">Ändra</button>
       </Link>
     </Col></Row>
     <Row><Col className="mt-2">
