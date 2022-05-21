@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { empty, remove, save } from './utilities/shoppingCartLogic';
 import { useEffect } from 'react';
 import { sweFormat } from './utilities/currencyFormatter';
-import './ShoppingCart.css'
 
 export default function ShoppingCart() {
 
