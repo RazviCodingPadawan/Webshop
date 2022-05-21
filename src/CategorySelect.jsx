@@ -7,7 +7,7 @@ export default function CategorySelector(props) {
   let [bindObject, bindProperty] = bindTo;
 
   return <select {...bindObject.bind(bindProperty)}>
-    {showAllOption && <option key={0} value={0}>all</option>}
+    {showAllOption && <option key={0} value={0}>alla</option>}
     {s.categories.map(({ name, id }) =>
       <option key={id} value={id}>{name}</option>
     )}
