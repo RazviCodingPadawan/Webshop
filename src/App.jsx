@@ -13,6 +13,7 @@ import './utilities/scrollBehavior';
 import MainNav from './MainNav';
 import StartPage from './StartPage';
 import ProductList from './ProductList';
+import Backoffice from './Backoffice';
 import ProductDetail from './ProductDetail';
 import ProductEdit from './ProductEdit';
 import ShoppingCart from './ShoppingCart'
@@ -47,6 +48,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<StartPage />} />
         <Route path="/product-list" element={<ProductList />} />
+        <Route path="/backoffice" element={<Backoffice />} />
         <Route path="/product-detail/:id" element={<ProductDetail />} />
         <Route path="/product-edit/:id" element={<ProductEdit />} />
         <Route path="/shopping-cart" element={<ShoppingCart />} />
