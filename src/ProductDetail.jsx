@@ -52,7 +52,7 @@ export default function ProductDetail() {
     <Row><Col><h1 className="mb-2">{name}</h1></Col></Row>
     <Row className="mb-3"><Col><h4>Kategori: {categoryName}</h4></Col></Row>
     <Row><Col>
-      <img onError={event => missingImage(event, name)} className="float-end ms-3" style={{ width: 250, height: 150, objectFit: 'cover' }} src={`/images/products/${id}.jpg`} />
+      <img onError={event => missingImage(event, name)} className="float-end ms-3" style={{ width: 300, height: 300, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
       <p>{description}</p>
     </Col></Row>
     <Row><Col><p>Pris: {sweFormat(price)}</p></Col></Row>
