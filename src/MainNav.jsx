@@ -18,6 +18,7 @@ export default function MainNav() {
         <Nav className="me-auto">
           <Link className="nav-link hem" to="/">Hem</Link>
           <Link className="nav-link products" to="/product-list">Produkter</Link>
+          <Link className="nav-link backoffice" to="/product-backoffice">Backoffice</Link>
         </Nav>
         <Link className="nav-link" to="/shopping-cart"><button className="cart">🛒</button></Link>
       </Navbar.Collapse>
