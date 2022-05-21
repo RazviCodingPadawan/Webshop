@@ -1,6 +1,7 @@
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import './MainNav.css'
+import Logo from "./images/LOGO.png";
 
 
 export default function MainNav() {
@@ -11,7 +12,7 @@ export default function MainNav() {
 
   return <Navbar className="navbar">
     <Container>
-      <Navbar.Brand className="logo_text" href="#home">EARN</Navbar.Brand>
+      <Navbar.Brand className="logo_text" href="#home"><img src={Logo}/></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
