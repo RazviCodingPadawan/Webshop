@@ -6,6 +6,7 @@ import CategorySelect from './CategorySelect';
 import { sweFormat } from './utilities/currencyFormatter';
 import { missingImage } from './utilities/handleMissingImage';
 import './ProductList.css'
+import './Backoffice.css'
 
 export default function Backoffice() {
 
