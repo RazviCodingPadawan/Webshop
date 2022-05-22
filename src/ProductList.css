@@ -1,8 +1,4 @@
 /* TEXTER */
-p {
-    margin-top: 20px;
-}
-
 h1 {
     display: flex;
     align-items: center;
@@ -11,27 +7,48 @@ h1 {
 
 h3 {
     color:#3a3a3a;
+    min-height: 130px;
 }
 
+
 .pris_p {
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 /* LAYOUTEN */
 
+.product_items {
+    display: flex;
+    flex-direction: column;
+}
+
 .productList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 15%;
+}
+
+.product_namn {
+    padding: 0 0 15px 0;
 }
 
 select {
     border: 1px solid #ebebeb;
     padding: 7px 15px;
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 20px;
 }
 
 .card {
-    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 85vh;
+    text-align: center;
+    padding: 0 60px;
+    border-radius: 15px;
 }
