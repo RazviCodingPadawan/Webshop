@@ -1,3 +1,37 @@
+/* TEXTER */
+p {
+    margin-top: 20px;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3 {
+    color:#3a3a3a;
+}
+
+.pris_p {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* LAYOUTEN */
+
 .productList {
-    margin-top: 10%;
+    margin-top: 15%;
+}
+
+select {
+    border: 1px solid #ebebeb;
+    padding: 7px 15px;
+    margin-left: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    margin-left: 10px;
 }
