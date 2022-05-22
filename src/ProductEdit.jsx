@@ -23,7 +23,7 @@ export default function ProductDetail() {
   return <Container className="productList">
     <Row><Col><h1>{name}</h1></Col></Row>
     <Row><Col><p>{description}</p></Col></Row>
-    <Row><Col><p>Pris: ${price}</p></Col></Row>
+    <Row><Col><p>Pris: {price}</p></Col></Row>
     <Row><Col>
       <label className="mt-3">Namn:
         <input className="form-control" {...product.bind('name')} />
