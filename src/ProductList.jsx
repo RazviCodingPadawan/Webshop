@@ -5,6 +5,7 @@ import { scrollRestore } from './utilities/scrollBehavior';
 import CategorySelect from './CategorySelect';
 import { sweFormat } from './utilities/currencyFormatter';
 import { missingImage } from './utilities/handleMissingImage';
+import {AddLike} from './components/AddLike'
 import './ProductList.css'
 
 export default function ProductList() {
@@ -14,9 +15,9 @@ export default function ProductList() {
   let s = useStates('main');
   let navigate = useNavigate();
 
-  /*function showDetail(id) {
+  function showDetail(id) {
     navigate(`/product-detail/${id}`);
-  }*/
+  }
 
   function buy() {
     // Add the product to the cart
@@ -26,21 +27,21 @@ export default function ProductList() {
   }
 
   return <Container className="productList">
-    <Row><Col><h1>Produkter</h1></Col></Row>
+    <Row><Col><h1>PRODUKTER</h1></Col></Row>
     <Row className="mb-3"><Col><CategorySelect showAllOption bindTo={[s, 'chosenCategoryId']} /></Col></Row>
     {s.products.filter(product =>
       s.chosenCategoryId === 0 /*alla*/
       || s.chosenCategoryId === product.categoryId
     ).map(({ id, name, description, price }) =>
       <Row className="product" key={id} onClick={() => showDetail(id)}>
-        <Card>
+        <Card >
           <Col xxl="12">
             <h3>{name}</h3>
             <img onError={event => missingImage(event, name)} className="float-end ms-3" style={{ width: 300, height: 300, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
-            <p>{description}</p>
+            <p>{description} <AddLike /></p>
           </Col>
           <Col xxl="12">
-            <p><b>Pris:</b> {sweFormat(price)}</p>
+            <p className="pris_p"><b>Pris:</b> {sweFormat(price)}</p>
           </Col>
         </Card>
       </Row>
