@@ -15,7 +15,7 @@ export default function Backoffice() {
   let navigate = useNavigate();
 
   function showDetail(id) {
-    navigate(`/product-detail/${id}`);
+    navigate(`/product-edit/${id}`);
   }
 
   return <Container className="productList">
