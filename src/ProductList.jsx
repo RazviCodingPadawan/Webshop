@@ -29,25 +29,29 @@ export default function ProductList() {
   return <Container className="productList">
     <Row><Col><h1>PRODUKTER</h1></Col></Row>
     <Row className="mb-3"><Col><CategorySelect showAllOption bindTo={[s, 'chosenCategoryId']} /></Col></Row>
-    {s.products.filter(product =>
+    <Row>
+      {s.products.filter(product =>
       s.chosenCategoryId === 0 /*alla*/
       || s.chosenCategoryId === product.categoryId
-    ).map(({ id, name, description, price }) =>
-      <Row className="product" key={id} onClick={() => showDetail(id)}>
-        <Card >
+      ).map(({ id, name, description, price }) =>
+        <Col xxl="3" md="4">
+          <div className="product" key={id} onClick={() => showDetail(id)}>
+        <Card>
           <Col xxl="12">
             <h3>{name}</h3>
-            <img onError={event => missingImage(event, name)} className="float-end ms-3" style={{ width: 300, height: 300, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
-            <p>{description} <AddLike /></p>
+            <img onError={event => missingImage(event, name)} className="float-end ms-3" style={{ width: 200, height: 200, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
+            <p>{description}<AddLike /></p>
           </Col>
           <Col xxl="12">
             <p className="pris_p"><b>Pris:</b> {sweFormat(price)}</p>
           </Col>
         </Card>
-      </Row>
-     
-  
+      </div>
+      </Col>
+      
     )}
+    </Row>
+    
    
   </Container>
 }
