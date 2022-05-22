@@ -14,9 +14,9 @@ export default function ProductList() {
   let s = useStates('main');
   let navigate = useNavigate();
 
-  /*function showDetail(id) {
+  function showDetail(id) {
     navigate(`/product-detail/${id}`);
-  }*/
+  }
 
   function buy() {
     // Add the product to the cart
@@ -28,25 +28,29 @@ export default function ProductList() {
   return <Container className="productList">
     <Row><Col><h1>Produkter</h1></Col></Row>
     <Row className="mb-3"><Col><CategorySelect showAllOption bindTo={[s, 'chosenCategoryId']} /></Col></Row>
-    {s.products.filter(product =>
+    <Row>
+      {s.products.filter(product =>
       s.chosenCategoryId === 0 /*alla*/
       || s.chosenCategoryId === product.categoryId
-    ).map(({ id, name, description, price }) =>
-      <Row className="product" key={id} onClick={() => showDetail(id)}>
+      ).map(({ id, name, description, price }) =>
+        <Col xxl="3" md="4">
+          <div className="product" key={id} onClick={() => showDetail(id)}>
         <Card>
           <Col xxl="12">
             <h3>{name}</h3>
-            <img onError={event => missingImage(event, name)} className="float-end ms-3" style={{ width: 300, height: 300, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
+            <img onError={event => missingImage(event, name)} className="float-end ms-3" style={{ width: 200, height: 200, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
             <p>{description}</p>
           </Col>
           <Col xxl="12">
             <p><b>Pris:</b> {sweFormat(price)}</p>
           </Col>
         </Card>
-      </Row>
-     
-  
+      </div>
+      </Col>
+      
     )}
+    </Row>
+    
    
   </Container>
 }
