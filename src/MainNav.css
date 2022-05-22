@@ -20,9 +20,10 @@
 
 .navbar-nav {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-left: 30%;
+    margin-left: 25%;
 }
 
 .cart {
