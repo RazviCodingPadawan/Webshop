@@ -50,15 +50,15 @@ export default function ProductDetail() {
       </Link>
     </Col></Row>
     <Row><Col><h1 className="mb-2">{name}</h1></Col></Row>
-    <Row className="mb-3"><Col><h4>Category: {categoryName}</h4></Col></Row>
+    <Row className="mb-3"><Col><h4>Kategori: {categoryName}</h4></Col></Row>
     <Row><Col>
-      <img onError={event => missingImage(event, name)} className="float-end ms-3" style={{ width: 250, height: 150, objectFit: 'cover' }} src={`/images/products/${id}.jpg`} />
+      <img onError={event => missingImage(event, name)} className="float-end ms-3" style={{ width: 300, height: 300, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
       <p>{description}</p>
     </Col></Row>
     <Row><Col><p>Pris: {sweFormat(price)}</p></Col></Row>
     <Row><Col>
       <Link to={`/product-edit/${id}`}>
-        <button type="button" className="my-4 btn btn-primary float-end">Edit</button>
+        <button type="button" className="my-4 btn btn-primary float-end">Ändra</button>
       </Link>
     </Col></Row>
     <Row><Col className="mt-2">

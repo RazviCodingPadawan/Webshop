@@ -7,22 +7,15 @@ import { sweFormat } from './utilities/currencyFormatter';
 import { missingImage } from './utilities/handleMissingImage';
 import './ProductList.css'
 
-export default function ProductList() {
+export default function Backoffice() {
 
   scrollRestore();
 
   let s = useStates('main');
   let navigate = useNavigate();
 
-  /*function showDetail(id) {
+  function showDetail(id) {
     navigate(`/product-detail/${id}`);
-  }*/
-
-  function buy() {
-    // Add the product to the cart
-    add(product, localState.buyQuantity);
-    // Show the cart
-    navigate('/shopping-cart');
   }
 
   return <Container className="productList">
@@ -44,9 +37,6 @@ export default function ProductList() {
           </Col>
         </Card>
       </Row>
-     
-  
     )}
-   
   </Container>
 }

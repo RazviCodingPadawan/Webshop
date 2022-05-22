@@ -23,25 +23,25 @@ export default function ProductDetail() {
   return <Container className="productList">
     <Row><Col><h1>{name}</h1></Col></Row>
     <Row><Col><p>{description}</p></Col></Row>
-    <Row><Col><p>Price: ${price}</p></Col></Row>
+    <Row><Col><p>Pris: ${price}</p></Col></Row>
     <Row><Col>
-      <label className="mt-3">Name:
+      <label className="mt-3">Namn:
         <input className="form-control" {...product.bind('name')} />
       </label>
     </Col></Row>
     <Row><Col>
-      <label className="mt-3">Description:
+      <label className="mt-3">Beskrivning:
         <textarea className="form-control" {...product.bind('description')} />
       </label>
     </Col></Row>
     <Row><Col>
-      <label className="mt-3">Price:
+      <label className="mt-3">Pris:
         <input type="number" className="form-control" {...product.bind('price')} />
       </label>
     </Col></Row>
     <Row className="mt-4"><Col>
       <label>
-        Category:&nbsp;
+        Kategori:&nbsp;
         <CategorySelect bindTo={[product, 'categoryId']} />
       </label>
     </Col></Row>
