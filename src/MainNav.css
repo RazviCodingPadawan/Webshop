@@ -37,13 +37,17 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-    box-shadow: -1px -1px 10px  rgba(63, 193, 183, 0.7),
-    3px 3px 20px  rgba(0, 0, 0, 0.2);
+    border: 1px solid #e7e7e7;
+    background: #fff;
+    transition: 6.3s ease-in-out;
+    box-shadow: -3px -3px 7px #40C2B8,
+                 3px 3px 5px #b2b1b1;
 }
 
 .cart:hover {
-    box-shadow: inset -1px -1px 20px rgba(63, 193, 183, 0.7),
-    inset 1px 1px 5px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    box-shadow: inset -3px -3px 7px #fff,
+                inset 3px 3px 5px #b2b1b1;
 }
 
 .nav-link .welcome {

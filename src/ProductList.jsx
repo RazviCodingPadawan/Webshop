@@ -35,21 +35,20 @@ export default function ProductList() {
       {s.products.filter(product =>
       s.chosenCategoryId === 0 /*alla*/
       || s.chosenCategoryId === product.categoryId
-      ).map(({ id, name, description, price }) =>
-        <Col xxl="3" md="4">
-          <div className="product">
-        <Card className="product_items">
-          <Col xxl="12" key={id} onClick={() => showDetail(id)}>
-            <h3 className="product_namn">{name}</h3>
-            <img onError={event => missingImage(event, name)} className="float-end ms-3" style={{ width: 200, height: 200, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
-
-          </Col>
-          <Col xxl="12">
-            <p className="pris_p"><b>Pris:</b> {sweFormat(price)}</p>
-          </Col>
-            <div className="likes"><AddLike /></div>
-        </Card>
-      </div>
+      ).map(({ id, name, price }) =>
+      <Col xxl="3" md="4">
+        <Container className="product">
+          <Card className="product_items">
+            <Col xxl="12" key={id} onClick={() => showDetail(id)}>
+              <h3 className="product_namn">{name}</h3>
+              <img onError={event => missingImage(event, name)} className="ms-3" style={{ width: 200, height: 200, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
+            </Col>
+            <Col xxl="12">
+              <p className="pris_p"><b>Pris:</b> {sweFormat(price)}</p>
+            </Col>
+              <Row className="likes"><AddLike /></Row>
+            </Card>
+        </Container>
       </Col>
       
     )}

@@ -6,6 +6,7 @@ import CategorySelect from './CategorySelect';
 import { sweFormat } from './utilities/currencyFormatter';
 import { missingImage } from './utilities/handleMissingImage';
 import './ProductList.css'
+import './Backoffice.css'
 
 export default function Backoffice() {
 
@@ -19,7 +20,7 @@ export default function Backoffice() {
   }
 
   return <Container className="productList">
-    <Row><Col><h1>Produkter</h1></Col></Row>
+    <Row><Col><h1>PRODUKTER</h1></Col></Row>
     <Row className="mb-3"><Col><CategorySelect showAllOption bindTo={[s, 'chosenCategoryId']} /></Col></Row>
     {s.products.filter(product =>
       s.chosenCategoryId === 0 /*alla*/

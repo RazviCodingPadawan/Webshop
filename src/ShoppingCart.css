@@ -1,0 +1,11 @@
+.shoppingCart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+
+.btn-primary {
+    margin-top: 30px;
+}
