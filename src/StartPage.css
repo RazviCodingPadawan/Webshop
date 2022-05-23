@@ -29,3 +29,8 @@
 span {
     font-size: 2rem;
 }
+footer{
+    position: fixed;
+    bottom: 0;
+
+}
