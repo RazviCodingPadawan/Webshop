@@ -10,9 +10,14 @@ import '../components/AddLike.css'
     return (
       <div className='likes_container'>
         <button className='like_btn' onClick={() => setCount(count + 1)}>
-        <img className='like_img' src={Like} alt="Logo"  width='22px'/>
+          <img className='like_img' src={Like} alt="Logo" width='22px' />
+          spara som favorit
         </button>
+<<<<<<< HEAD
         <p className='like_p'>Totala likes: {count}</p>
+=======
+        {/* <p className='like_p'>Total likes: {count}</p> */}
+>>>>>>> main
       </div>
     );
   }

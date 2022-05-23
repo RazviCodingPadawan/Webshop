@@ -5,6 +5,7 @@ import { add } from './utilities/shoppingCartLogic';
 import { sweFormat } from './utilities/currencyFormatter';
 import { useEffect } from 'react';
 import { missingImage } from './utilities/handleMissingImage';
+import './ProductDetail.css'
 
 export default function ProductDetail() {
 
@@ -42,7 +43,7 @@ export default function ProductDetail() {
     navigate('/shopping-cart');
   }
 
-  return <Container className="productList">
+  return <Container className="productDetail">
     <Row><Col>
       <Link to={`/backoffice`}>
         <button type="button" className="my-4 btn btn-primary">Tillbaka till listan</button>
@@ -55,7 +56,7 @@ export default function ProductDetail() {
       <img onError={event => missingImage(event, name)} className="float-end ms-3" style={{ width: 300, height: 300, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
       <p>{description}</p>
     </Col></Row>
-    <Row><Col><p>Pris: {sweFormat(price)}</p></Col></Row>
+    <Row><Col><p><b>Pris: {sweFormat(price)}</b></p></Col></Row>
     <Row><Col>
       <Link to={`/product-edit/${id}`}>
         {/* <button type="button" className="my-4 btn btn-primary float-end">Ändra</button> */}
@@ -63,7 +64,7 @@ export default function ProductDetail() {
     </Col></Row>
     <Row><Col className="mt-2">
       <button type="button" onClick={buy} className="btn btn-primary float-end">Köp</button>
-      <input style={{ width: 100 }} className="float-end mt-1 me-3" type="number" {...localState.bind('buyQuantity')} />
+      <input style={{ width: 100 }} className="float-end mt-3 me-6" type="number" {...localState.bind('buyQuantity')} />
     </Col></Row>
   </Container>
 }

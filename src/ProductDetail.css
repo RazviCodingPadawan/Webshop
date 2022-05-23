@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
+
+.productDetail {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-top: 10%;
+}
+
+h1 {
+    font-family: 'Russo One', sans-serif;
+    color: #3a3a3a;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.mt-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.btn-primary {
+    margin: 15px 0;
+    padding:15px 90px;
+    font-family: 'Rajdhani', sans-serif;}

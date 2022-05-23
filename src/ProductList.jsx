@@ -41,7 +41,7 @@ export default function ProductList() {
           <Card className="product_items">
             <Col xxl="12" key={id} onClick={() => showDetail(id)}>
               <h3 className="product_namn">{name}</h3>
-              <img onError={event => missingImage(event, name)} className="float-end ms-3" style={{ width: 200, height: 200, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
+              <img onError={event => missingImage(event, name)} className="ms-3" style={{ width: 200, height: 200, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
             </Col>
             <Col xxl="12">
               <p className="pris_p"><b>Pris:</b> {sweFormat(price)}</p>

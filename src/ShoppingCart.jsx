@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { empty, remove, save } from './utilities/shoppingCartLogic';
 import { useEffect } from 'react';
 import { sweFormat } from './utilities/currencyFormatter';
-import './ShopingCart.css'
+import './ShoppingCart.css'
 
 export default function ShoppingCart() {
 
@@ -27,10 +27,10 @@ export default function ShoppingCart() {
         {s.cartContents.length ? <table className="table">
           <thead>
             <tr>
-              <th>Produkt</th>
+              <th>Produkt namn</th>
               <th className="text-end">Antal</th>
-              <th className="text-end">à</th>
-              <th className="text-end">Tot</th>
+              <th className="text-end">Pris</th>
+              <th className="text-end">Total/Pris</th>
             </tr>
           </thead>
           <tbody>
