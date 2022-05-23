@@ -13,7 +13,7 @@ import '../components/AddLike.css'
           <img className='like_img' src={Like} alt="Logo" width='22px' />
           spara som favorit
         </button>
-        <p className='like_p'>Totala likes: {count}</p>
+        
       </div>
     );
   }
