@@ -47,11 +47,11 @@ select {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    min-height: 78vh;
+    /* min-height: 78vh; */
     text-align: center;
-    padding: 0 60px;
+    /* padding: 0 60px; */
     border-radius: 15px;
-    border: 1px solid #e7e7e7;
+    /* border: 1px solid #e7e7e7; */
     background: #fff;
     box-shadow: -3px -3px 7px #fff,
                  3px 3px 5px #b2b1b1;
