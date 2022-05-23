@@ -19,7 +19,7 @@ export default function Backoffice() {
   }
 
   return <Container className="productList">
-    <Row><Col><h1>Produkter</h1></Col></Row>
+    <Row><Col><h1>PRODUKTER</h1></Col></Row>
     <Row className="mb-3"><Col><CategorySelect showAllOption bindTo={[s, 'chosenCategoryId']} /></Col></Row>
     {s.products.filter(product =>
       s.chosenCategoryId === 0 /*alla*/
