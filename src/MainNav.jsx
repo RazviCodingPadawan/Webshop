@@ -2,7 +2,7 @@ import { Container, Navbar, Nav } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import './MainNav.css'
 import Logo from "./images/LOGO.png";
-
+//import ShoppingCart from './ShoppingCart';
 
 export default function MainNav() {
 
