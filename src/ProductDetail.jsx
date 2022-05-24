@@ -57,11 +57,6 @@ export default function ProductDetail() {
       <p>{description}</p>
     </Col></Row>
     <Row><Col><p><b>Pris: {sweFormat(price)}</b></p></Col></Row>
-    <Row><Col>
-      <Link to={`/product-edit/${id}`}>
-        {/* <button type="button" className="my-4 btn btn-primary float-end">Ändra</button> */}
-      </Link>
-    </Col></Row>
     <Row><Col className="mt-2">
       <button type="button" onClick={buy} className="btn btn-primary float-end">Köp</button>
       <input style={{ width: 100 }} className="float-end mt-3 me-6" type="number" {...localState.bind('buyQuantity')} />
