@@ -17,6 +17,7 @@ import Backoffice from './Backoffice';
 import ProductDetail from './ProductDetail';
 import ProductEdit from './ProductEdit';
 import ShoppingCart from './ShoppingCart'
+import Welcome from './Welcome';
 
 // Create classes used for fetching from the REST-api
 const { Product, Categorie: Category } = factory;
@@ -52,6 +53,7 @@ export default function App() {
         <Route path="/product-detail/:id" element={<ProductDetail />} />
         <Route path="/product-edit/:id" element={<ProductEdit />} />
         <Route path="/shopping-cart" element={<ShoppingCart />} />
+        <Route path="/welcome" element={<Welcome />} />
       </Routes>
     </Router>
 }

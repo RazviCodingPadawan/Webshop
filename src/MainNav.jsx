@@ -30,9 +30,9 @@ export default function MainNav() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Link className="nav-link hem" to="/">Hem</Link>
-          <Link className="nav-link products" to="/product-list">Produkter</Link>
-          <Link className="nav-link products" to="/backoffice">Backoffice</Link>
+          <Link className="nav-link hem" to="/">HEM</Link>
+          <Link className="nav-link products" to="/product-list">PRODUKTER</Link>
+          <Link className="nav-link products" to="/backoffice">BACKOFFICE</Link>
         </Nav>
         <Link className="nav-link" to="/shopping-cart"><button className="cart">🛒 {totalNumberOfProductsInCart}</button></Link>
       </Navbar.Collapse>
