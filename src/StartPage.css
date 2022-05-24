@@ -7,12 +7,12 @@
     justify-content: center;
     width:100%;
     height: 100vh;
-    background-image: url('./images/3.jpg');
+    background-image: url('./images/pink.jpg');
+    background-size: cover;
 }
 
 .main_text {
     display: flex;
-    font-family: 'Roboto', sans-serif;
     flex-direction: column;
     text-align: center;
     flex-wrap: wrap;
@@ -22,10 +22,31 @@
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(253, 239, 5, 0.7);
     padding: 70px;
 }
 
 span {
     font-size: 2rem;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:50px;
+    position: fixed;
+    bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.footer_link {
+    text-decoration: none;
+    color: crimson;
+    letter-spacing: 2px;
+}
+
+.footer_link:hover {
+    color: #3a3a3a;
 }

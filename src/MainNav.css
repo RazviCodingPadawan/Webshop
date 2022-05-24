@@ -1,17 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
 .navbar {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    position: absolute;
-    top: 2%;
+    position:absolute;
+    top: 20px;
     left: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .main_container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .navbar-brand {
@@ -20,10 +25,9 @@
 
 .navbar-nav {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-left: 25%;
+    margin-left: 250px;
 }
 
 .cart {
@@ -32,7 +36,7 @@
     background: #fff;
     border: none;
     border-radius: 3px;
-    color: #208077;
+    color: #3a3a3a;
     font-size: 0.8rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -40,7 +44,7 @@
     border: 1px solid #e7e7e7;
     background: #fff;
     transition: 6.3s ease-in-out;
-    box-shadow: -3px -3px 7px #40C2B8,
+    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.7),
                  3px 3px 5px #b2b1b1;
 }
 

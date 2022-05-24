@@ -6,6 +6,7 @@ import CategorySelect from './CategorySelect';
 import { sweFormat } from './utilities/currencyFormatter';
 import { missingImage } from './utilities/handleMissingImage';
 import {AddLike} from './components/AddLike'
+// import {Favorites} from './components/Favorites'
 import './ProductList.css'
 
 export default function ProductList() {
@@ -36,12 +37,13 @@ export default function ProductList() {
       s.chosenCategoryId === 0 /*alla*/
       || s.chosenCategoryId === product.categoryId
       ).map(({ id, name, price }) =>
-      <Col xxl="3" md="4">
+      <Col xxl="4" md="3">
         <Container className="product">
           <Card className="product_items">
             <Col xxl="12" key={id} onClick={() => showDetail(id)}>
-              <h3 className="product_namn">{name}</h3>
+              {/* <Row className="favorites"><Favorites /></Row> */}
               <img onError={event => missingImage(event, name)} className="ms-3" style={{ width: 200, height: 200, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
+              <h3 className="product_namn">{name}</h3>
             </Col>
             <Col xxl="12">
               <p className="pris_p"><b>Pris:</b> {sweFormat(price)}</p>

@@ -3,23 +3,26 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 4vw;
 }
 
 h3 {
     color:#3a3a3a;
-    min-height: 130px;
 }
 
 
 .pris_p {
-    margin: 20px 0 0 0;
+    margin-bottom: 30px;
+    color: #E97673;
+    font-size: 1.5vw;
 }
 
 /* LAYOUTEN */
 
 .product_items {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .productList {
@@ -27,11 +30,11 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
-.product_namn {
-    padding: 0 0 15px 0;
+.col-xxl-12 {
+    margin-top: 7vw;
 }
 
 select {
@@ -46,12 +49,12 @@ select {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    /* min-height: 78vh; */
+    justify-content: center;
     text-align: center;
-    /* padding: 0 60px; */
-    border-radius: 15px;
-    /* border: 1px solid #e7e7e7; */
+    width: 100%;
+    padding: 0 60px;
+    border-radius: 7px;
+    border: 1px solid #e7e7e7;
     background: #fff;
     box-shadow: -3px -3px 7px #fff,
                  3px 3px 5px #b2b1b1;
@@ -63,5 +66,3 @@ select {
               inset 3px 3px 5px #b2b1b1;
     animation-delay: 2s;
 }
-
-

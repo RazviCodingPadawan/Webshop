@@ -1,36 +1,33 @@
-import { useStates } from './utilities/states';
+import { useState, useEffect } from './utilities/states';
 
 export default function SortProduct() {
 
-  const [data, setData] = useState([]);
-  const [sortType, setSortType] = useState('albums');
+  const [data, setData] = useState('main');
+  const [sortType, setSortType] = useState('main');
   useEffect(() => {
     const sortArray = type => {
       const types = {
-        country: 'country',
-        collection: 'collection',
-        releasedOn: 'releasedOn',
+        name: 'name',
+        price: 'price',
       };
       const sortProperty = types[type];
-      const sorted = [...movies].sort((a, b) => b[sortProperty] - a[sortProperty]);
+      const sorted = [...products].sort((a, b) => b[sortProperty] - a[sortProperty]);
       setData(sorted);
     };
     sortArray(sortType);
   }, [sortType]);
 
     return (
-    <div className="App">
+      <div className="App">
+        <p>Sortera efter:</p>
       <select onChange={(e) => setSortType(e.target.value)}> 
-        <option value="country">Country</option>
-        <option value="collection">Collection</option>
-        <option value="releasedOn">Release Date</option>
+        <option value="name">Namn</option>
+        <option value="price">Pris</option>
       </select>
-      {data.map(movie => (
-        <div key={movie.id} style={{ margin: '30px' }}>
-          <div>{`Movie: ${movie.name}`}</div>
-          <div>{`Country: ${movie.country}`}</div>
-          <div>{`Collection: ${movie.collection}`}</div>
-          <div>{`Year of Release: ${movie.releasedOn}`}</div>
+      {data.map(products => (
+        <div key={products.id} style={{ margin: '30px' }}>
+          <div>{`Namn: ${products.name}`}</div>
+          <div>{`Pris: ${products.price}`}</div>
         </div>
       ))}
     </div>
