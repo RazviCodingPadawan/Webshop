@@ -26,4 +26,15 @@ h1 {
 .btn-primary {
     margin: 15px 0;
     padding:15px 90px;
-    font-family: 'Rajdhani', sans-serif;}
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #E97673;
+    border: none;
+    border-radius:2px;
+}
+
+.btn-primary:hover {
+    background-color: #f9a3a0;
+    color: #3a3a3a;
+}
+
+

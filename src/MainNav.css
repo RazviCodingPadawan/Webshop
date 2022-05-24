@@ -4,20 +4,19 @@
 .navbar {
     display: flex;
     position:absolute;
-    top: 0;
+    top: 20px;
     left: 0;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 120px;
+    height: 100px;
     background-color: rgba(255, 255, 255, 0.7);
 }
 
 .main_container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .navbar-brand {
@@ -28,7 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 20px;
+    margin-left: 250px;
 }
 
 .cart {

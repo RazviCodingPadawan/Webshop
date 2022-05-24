@@ -3,6 +3,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 4vw;
 }
 
 h3 {
@@ -12,13 +13,16 @@ h3 {
 
 .pris_p {
     margin-bottom: 30px;
+    color: #E97673;
+    font-size: 1.5vw;
 }
 
 /* LAYOUTEN */
 
 .product_items {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .productList {
@@ -26,7 +30,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 .col-xxl-12 {
@@ -47,8 +51,9 @@ select {
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
     padding: 0 60px;
-    border-radius: 15px;
+    border-radius: 7px;
     border: 1px solid #e7e7e7;
     background: #fff;
     box-shadow: -3px -3px 7px #fff,
