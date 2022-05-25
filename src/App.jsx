@@ -20,6 +20,7 @@ import ShoppingCart from './ShoppingCart'
 import Welcome from './Welcome';
 import Footer from './Footer/Footer';
 import Edit from './Edit';
+import Create from './Create';
 
 // Create classes used for fetching from the REST-api
 const { Product, Categorie: Category } = factory;
@@ -51,6 +52,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<StartPage />} />
         <Route path="/backoffice/edit" element={<Edit />} />
+        <Route path="/backoffice/create" element={<Create />} />
         <Route path="/product-list" element={<ProductList />} />
         <Route path="/backoffice" element={<Backoffice />} />
         <Route path="/product-detail/:id" element={<ProductDetail />} />
