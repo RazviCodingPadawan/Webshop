@@ -34,13 +34,13 @@ const Create = () => {
     <div className='productList'>
       <Form onSubmit={SubmitData}>
         <label>Namn</label>
-        <input value={horseData.name} name="name" onChange={handleInputData} placeholder='Namn' />
+        <input value={mobilData.name} name="name" onChange={handleInputData} placeholder='Namn' />
 
         <label>Beskrivning</label>
-        <input value={horseData.description} name="description" onChange={handleInputData} placeholder='Beskrivning' />
+        <input value={mobilData.description} name="description" onChange={handleInputData} placeholder='Beskrivning' />
 
         <label>Pris</label>
-        <input value={horseData.price} name="price" onChange={handleInputData} placeholder='Pris' />
+        <input value={mobilData.price} name="price" onChange={handleInputData} placeholder='Pris' />
 
         <Button type='submit'>Create</Button>
       </Form>
