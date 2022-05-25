@@ -24,7 +24,7 @@ export default function MainNav() {
   // What is the smartest way to recreate that functionality
   // (adding an active CSS class to the active menu choice)
 
-  return <Navbar className="navbar">
+  return <Navbar fixed="top" expand="lg" className="mb-4">
     <Container>
       <Navbar.Brand className="logo_text" href="#home"><img src={Logo}/></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

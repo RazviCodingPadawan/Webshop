@@ -1,9 +1,10 @@
 /* TEXTER */
-h1 {
+.product_name {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 4vw;
+    color: #E97673;
 }
 
 h3 {
