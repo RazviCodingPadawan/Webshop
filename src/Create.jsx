@@ -1,25 +1,51 @@
-import { useStates } from './utilities/states';
-import { Container } from 'react-bootstrap';
-import { useNavigate } from "react-router-dom";
-import { scrollRestore } from './utilities/scrollBehavior';
-import { Link } from "react-router-dom";
 
-import './ProductList.css'
-import './Backoffice.css'
+   
+import React, { useState } from 'react';
+import { Form, Button } from 'react-bootstrap';
+import axios from 'axios'
 
-export default function Backoffice() {
+const Create = () => {
 
-  scrollRestore();
+  const [mobilData, setMobilData] = useState({
+    categoryId: 1, // Do not hard code? Let the user choose?
+    name: "",
+    description: "",
+    price: 0
+  });
 
-  let s = useStates('main');
-  let navigate = useNavigate();
-
-  function showDetail(id) {
-    navigate(`/product-edit/${id}`);
+  const handleInputData = e => {
+    setMobilData(data => ({
+      ...data,
+      [e.target.name]: e.target.value
+    }))
   }
 
-  return <Container className="productList">
-    <h1>Create new product</h1>
-    <Link to="/backoffice">back to backoffice</Link>
-  </Container>
+  const SubmitData = async e => {
+    e.preventDefault()
+    let result = await (await fetch('/api/products', {
+      method: "POST",
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify(horseData)
+    })).json();
+    console.log(result)
+  }
+
+  return (
+    <div className='productList'>
+      <Form onSubmit={SubmitData}>
+        <label>Namn</label>
+        <input value={mobilData.name} name="name" onChange={handleInputData} placeholder='Namn' />
+
+        <label>Beskrivning</label>
+        <input value={mobilData.description} name="description" onChange={handleInputData} placeholder='Beskrivning' />
+
+        <label>Pris</label>
+        <input value={mobilData.price} name="price" onChange={handleInputData} placeholder='Pris' />
+
+        <Button type='submit'>Create</Button>
+      </Form>
+    </div>
+  )
 }
+
+export default Create

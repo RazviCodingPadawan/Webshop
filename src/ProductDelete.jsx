@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { useParams, useNavigate } from "react-router-dom";
 import CategorySelect from './CategorySelect';
 
-export default function ProductEdit() {
+export default function ProductDelete() {
 
   let s = useStates('main');
   let { id } = useParams();
@@ -13,13 +13,16 @@ export default function ProductEdit() {
   if (!product) { return null; }
   let { name, description, price } = product;
 
-  async function save() {
-    // Save to db
-    await product.save();
+    async function deleteProduct() {
+    // Delete from db
+    await product.delete();
     // Navigate to detail page
     navigate(`/backoffice/edit`);
-  }
 
+    
+    window.location.reload(false);
+  
+    }
 
   return <Container className="productList">
     <Row><Col><h1>{name}</h1></Col></Row>
@@ -46,6 +49,6 @@ export default function ProductEdit() {
         <CategorySelect bindTo={[product, 'categoryId']} />
       </label>
     </Col></Row>
-    <button type="button" onClick={save} className="my-4 btn btn-primary float-end">Spara</button>   
+    <button type="button" onClick={deleteProduct} className="my-4 btn btn-primary float-end">Radera</button>
   </Container>
 }
