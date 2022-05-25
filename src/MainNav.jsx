@@ -34,7 +34,8 @@ export default function MainNav() {
           <Link className="nav-link products" to="/product-list">PRODUKTER</Link>
           <Link className="nav-link products" to="/backoffice">BACKOFFICE</Link>
         </Nav>
-        <Link className="nav-link" to="/shopping-cart"><button className="cart">🛒 {totalNumberOfProductsInCart}</button></Link>
+        <Link className="nav-link" to="/shopping-cart"><button className="btn_cart">🛒 {totalNumberOfProductsInCart}</button></Link>
+        <Link className="nav-link" to="/login"><button className="btn_login"> Login</button></Link>
       </Navbar.Collapse>
     </Container>
   </Navbar>

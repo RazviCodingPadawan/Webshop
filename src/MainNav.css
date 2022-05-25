@@ -4,7 +4,7 @@
 .mb-4 {
     display: flex;
     position:absolute;
-    top: 20px;
+    top: 0;
     left: 0;
     flex-direction: row;
     align-items: center;
@@ -48,7 +48,57 @@
                  3px 3px 5px #b2b1b1;
 }
 
+
 .cart:hover {
+    background: #fff;
+    box-shadow: inset -3px -3px 7px #fff,
+                inset 3px 3px 5px #b2b1b1;
+}
+
+.btn_cart {
+    padding: 10px 20px;
+    margin: 10px;
+    background: #fff;
+    border: none;
+    border-radius: 3px;
+    color: #3a3a3a;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid #e7e7e7;
+    background: #fff;
+    transition: 6.3s ease-in-out;
+    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.7),
+                 3px 3px 5px #b2b1b1;
+}
+
+
+.btn_cart:hover {
+    background: #fff;
+    box-shadow: inset -3px -3px 7px #fff,
+                inset 3px 3px 5px #b2b1b1;
+}
+
+
+.btn_login {
+
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: rgba(237, 218, 7, 0.8);
+    border: none;
+    border-radius: 3px;
+    color: #626262;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 6.3s ease-in-out;
+    box-shadow: -3px -3px 7px rgba(216, 216, 216, 0.7),
+                 3px 3px 5px #b2b1b1;
+}
+
+.btn_login:hover {
     background: #fff;
     box-shadow: inset -3px -3px 7px #fff,
                 inset 3px 3px 5px #b2b1b1;
