@@ -30,7 +30,7 @@ export default function ProductList() {
   
 
   return <Container className="productList">
-    <Row><Col><h1>PRODUKTER</h1></Col></Row>
+    <Row><Col><h1 className='product_name'>PRODUKTER</h1></Col></Row>
     <Row className="mb-3"><Col><CategorySelect showAllOption bindTo={[s, 'chosenCategoryId']} /></Col></Row>
     <Row>
       {s.products.filter(product =>

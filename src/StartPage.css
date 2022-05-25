@@ -24,6 +24,7 @@
     letter-spacing: 10px;
     background-color: rgba(253, 239, 5, 0.7);
     padding: 70px;
+    animation-duration: 2s;
 }
 
 span {
