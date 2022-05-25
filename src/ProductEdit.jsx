@@ -25,6 +25,10 @@ export default function ProductDetail() {
     await product.delete();
     // Navigate to detail page
     navigate(`/backoffice/edit`);
+
+    
+    window.location.reload(false);
+  
     }
 
   return <Container className="productList">
