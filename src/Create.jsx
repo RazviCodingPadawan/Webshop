@@ -11,11 +11,15 @@ export default function Backoffice() {
 
   scrollRestore();
 
+  let s = useStates('main');
+  let navigate = useNavigate();
+
+  function showDetail(id) {
+    navigate(`/product-edit/${id}`);
+  }
+
   return <Container className="productList">
-    <h1>Welcome to backoffice</h1>
-    <h3>The place where shit happens 💩</h3>
-    <Link to="/backoffice/edit">Edit</Link>
-    <Link to="/backoffice/create">Create</Link>
-    <Link to="/backoffice/delete">Delete</Link>
+    <h1>Create new product</h1>
+    <Link to="/backoffice">back to backoffice</Link>
   </Container>
 }
