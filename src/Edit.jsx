@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import './ProductList.css'
 import './Backoffice.css'
 
-export default function Backoffice() {
+export default function Edit() {
 
   scrollRestore();
 
