@@ -25,7 +25,7 @@ const Create = () => {
     let result = await (await fetch('/api/products', {
       method: "POST",
       headers: { 'Content-type': 'application/json' },
-      body: JSON.stringify(horseData)
+      body: JSON.stringify(mobilData)
     })).json();
     console.log(result)
   }
