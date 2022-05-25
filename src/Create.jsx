@@ -1,22 +1,51 @@
 
-import { Container, Row, Col } from 'react-bootstrap';
-import { scrollRestore } from './utilities/scrollBehavior';
-import { Link } from "react-router-dom";
+   
+import React, { useState } from 'react';
+import { Form, Button } from 'react-bootstrap';
+import axios from 'axios'
 
-import './ProductList.css'
-import './Backoffice.css'
+const Create = () => {
 
-export default function Create() {
+  const [mobilData, setMobilData] = useState({
+    categoryId: 1, // Do not hard code? Let the user choose?
+    name: "",
+    description: "",
+    price: 0
+  });
 
-  scrollRestore();
+  const handleInputData = e => {
+    setMobilData(data => ({
+      ...data,
+      [e.target.name]: e.target.value
+    }))
+  }
 
-  return <Container className="productList">
-    <h1>Create new product</h1>
-    <Link to="/backoffice">back to backoffice</Link>
-    <Row><Col><label className="mt-3">Namn<input className="form-control"></input></label></Col></Row>
-    <Row><Col><label className="mt-3">Beskrivning<textarea className="form-control"></textarea></label></Col></Row>
-    <Row><Col><label className="mt-3">Pris<input type="number" className="form-control"></input></label></Col></Row>
-    <Row className="mt-4"><Col><label>Kategori:</label></Col></Row>
-    <button type="button" className="my-4 btn btn-primary float-end">Spara</button>
-  </Container>
+  const SubmitData = async e => {
+    e.preventDefault()
+    let result = await (await fetch('/api/products', {
+      method: "POST",
+      headers: { 'Content-type': 'application/json' },
+      body: JSON.stringify(horseData)
+    })).json();
+    console.log(result)
+  }
+
+  return (
+    <div className='productList'>
+      <Form onSubmit={SubmitData}>
+        <label>Namn</label>
+        <input value={horseData.name} name="name" onChange={handleInputData} placeholder='Namn' />
+
+        <label>Beskrivning</label>
+        <input value={horseData.description} name="description" onChange={handleInputData} placeholder='Beskrivning' />
+
+        <label>Pris</label>
+        <input value={horseData.price} name="price" onChange={handleInputData} placeholder='Pris' />
+
+        <Button type='submit'>Create</Button>
+      </Form>
+    </div>
+  )
 }
+
+export default Create
