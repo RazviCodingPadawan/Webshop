@@ -22,6 +22,7 @@ import Footer from './Footer/Footer';
 import Edit from './Edit';
 import Create from './Create';
 import Delete from './Delete'
+import ProductDelete from './ProductDelete';
 
 // Create classes used for fetching from the REST-api
 const { Product, Categorie: Category } = factory;
@@ -59,6 +60,7 @@ export default function App() {
         <Route path="/backoffice" element={<Backoffice />} />
         <Route path="/product-detail/:id" element={<ProductDetail />} />
         <Route path="/product-edit/:id" element={<ProductEdit />} />
+        <Route path="/product-delete/:id" element={<ProductDelete />} />
         <Route path="/shopping-cart" element={<ShoppingCart />} />
         <Route path="/welcome" element={<Welcome />} />
       </Routes>
