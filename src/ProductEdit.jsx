@@ -17,8 +17,15 @@ export default function ProductDetail() {
     // Save to db
     await product.save();
     // Navigate to detail page
-    navigate(`/product-detail/${id}`);
+    navigate(`/backoffice/edit`);
   }
+
+    async function deleteProduct() {
+    // Delete from db
+    await product.delete();
+    // Navigate to detail page
+    navigate(`/backoffice/edit`);
+    }
 
   return <Container className="productList">
     <Row><Col><h1>{name}</h1></Col></Row>
@@ -46,5 +53,6 @@ export default function ProductDetail() {
       </label>
     </Col></Row>
     <button type="button" onClick={save} className="my-4 btn btn-primary float-end">Spara</button>
+    <button type="button" onClick={deleteProduct} className="my-4 btn btn-primary float-end">Radera</button>
   </Container>
 }
