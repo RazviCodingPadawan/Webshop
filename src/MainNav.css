@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
+
 .mb-4 {
+    background-color: rgba(237, 218, 7, 0.9);
+}
+
+.navbar-collapse .collapse {
     display: flex;
-    position:absolute;
-    top: 0;
-    left: 0;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100px;
-    background-color: rgba(237, 218, 7, 0.7);
+    background-color: rgba(255, 255, 255, 1);
+    
 }
 
 .main_container {
@@ -27,7 +28,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 250px;
 }
 
 .cart {
