@@ -30,6 +30,7 @@
     margin-left: 250px;
 }
 
+/*
 .cart {
     padding: 20px 20px;
     margin: 20px;
@@ -54,8 +55,9 @@
     box-shadow: inset -3px -3px 7px #fff,
                 inset 3px 3px 5px #b2b1b1;
 }
+*/
 
-.btn_cart {
+/*.btn_cart {
     padding: 10px 20px;
     margin: 10px;
     background: #fff;
@@ -102,7 +104,7 @@
     background: #fff;
     box-shadow: inset -3px -3px 7px #fff,
                 inset 3px 3px 5px #b2b1b1;
-}
+}*/
 
 .nav-link .welcome {
     color: #208077;
@@ -123,3 +125,4 @@
 .navbar-light .navbar-nav .nav-link:hover {
     color: #669590;
 }
+
