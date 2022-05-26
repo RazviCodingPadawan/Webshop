@@ -1,0 +1,21 @@
+{
+    "name": "EARN PWA",
+    "short_name": "EARN",
+    "theme_color": "#E97673",
+    "background_color": "#FCC52B",
+    "display": "standalone",
+    "orientation": "portrait",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "src/images/playstore.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "src/images/ic_launcher.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
