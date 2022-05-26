@@ -26,7 +26,7 @@ export default function MainNav() {
 
   return <Navbar fixed="top" expand="lg" className="mb-4">
     <Container>
-      <Navbar.Brand className="logo_text" href="#home"><img src={Logo}/></Navbar.Brand>
+      <Navbar.Brand className="logo_text" href="#home"><img src={Logo} style={{ height: 110 }}/></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
