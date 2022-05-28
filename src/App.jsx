@@ -18,7 +18,6 @@ import ProductDetail from './ProductDetail';
 import ProductEdit from './ProductEdit';
 import ShoppingCart from './ShoppingCart'
 import Welcome from './Welcome';
-import Footer from './Footer/Footer';
 import Edit from './Edit';
 import Create from './Create';
 import Delete from './Delete'
@@ -64,6 +63,5 @@ export default function App() {
         <Route path="/shopping-cart" element={<ShoppingCart />} />
         <Route path="/welcome" element={<Welcome />} />
       </Routes>
-      <Footer/>
     </Router>
 }
