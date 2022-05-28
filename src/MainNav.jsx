@@ -25,20 +25,18 @@ export default function MainNav() {
   // What is the smartest way to recreate that functionality
   // (adding an active CSS class to the active menu choice)
 
-  return <Navbar fixed="top" bg="" variant="" expand="lg" className="navbar navbar-light teal lighten-4  mb-4">
-    <Container>
-      <Navbar.Brand className="logo_text" href="#home"><img src={Logo} style={{ height: 110 }}/></Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="navbar-nav mr-auto">
-          <Link className="nav-link hem" to="/">HEM</Link>
-          <Link className="nav-link products" to="/product-list">PRODUKTER</Link>
-          <Link className="nav-link products" to="/backoffice">BACKOFFICE</Link>
-          <Link className="nav-link" to="/shopping-cart"><button className="btn_cart">🛒 {totalNumberOfProductsInCart}</button></Link>
-          <Link className="nav-link" to="/login"><button className="btn_login"> Login</button></Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Container>
-  </Navbar>
+  return <Navbar fixed="top" bg="" variant="" expand="lg" className="navbar navbar-light mb-4">
+            <Navbar.Brand className="logo_text" href="#home"><img src={Logo} style={{ height: 90 }}/></Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="navbar-nav mr-auto">
+                <Link className="nav-link hem" to="/">HEM</Link>
+                <Link className="nav-link products" to="/product-list">PRODUKTER</Link>
+                <Link className="nav-link products" to="/backoffice">BACKOFFICE</Link>
+                <Link className="nav-link" to="/shopping-cart"><button className="btn_cart">🛒 {totalNumberOfProductsInCart}</button></Link>
+                <Link className="nav-link" to="/login"><button className="btn_login"> Login</button></Link>
+              </Nav>
+            </Navbar.Collapse>
+         </Navbar>
 }
 

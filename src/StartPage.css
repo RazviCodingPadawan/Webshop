@@ -18,8 +18,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 60%;
-    height: 50%;
+    min-width: 45%;
+    min-height: 35%;
     margin-top: 3%;
     padding-bottom: 5%;
     background-color: rgba(253, 239, 5, 0.7);
@@ -27,7 +27,7 @@
 }
 
 .main_name {
-    font-size: 5vw;
+    font-size: 3.5vw;
     color: #3a3a3a;
     font-weight: 800;
     text-transform: uppercase;
@@ -36,8 +36,15 @@
 
 
 .span {
-    font-size: 3.5vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    padding: 5px;
 }
+
 /* footer{
     display: flex;
     flex-direction: row;

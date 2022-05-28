@@ -1,5 +1,7 @@
 .footer {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
@@ -9,4 +11,23 @@
   bottom: 0;
   left: 0;
   width: 100%;
+}
+
+.nav_footer_social {
+  padding: 0 25px;
+}
+
+.nav_footer {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+  padding: 0 15px;
+}
+
+.nav_footer:hover {
+  color: #3a3a3a;
+}
+
+.adress {
+  padding: 0 15px;
 }
