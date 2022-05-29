@@ -54,7 +54,8 @@ export default function ProductList() {
   }
 
   return <Container className="product_list">
-    <Row><Col><h1>Produkter</h1></Col></Row>
+    
+    <Row><Col><h1 className="product_main_title">Produkter</h1></Col></Row>
       
     <Row>
         <Col className="search_select">
@@ -64,7 +65,7 @@ export default function ProductList() {
               <option value="priceDesc">Pris (fallande)</option>
             </select>
             <CategorySelect className="search_id" showAllOption bindTo={[s, 'chosenCategoryId']} />
-            <input className="search_input" type="text" placeholder='🪕search' value={searchTerm} onChange={event => setSearchTerm(event.target.value)} />
+            <input className="search_input" type="text" placeholder='Search' value={searchTerm} onChange={event => setSearchTerm(event.target.value)} />
         </Col>
       </Row>
       <Row>
@@ -81,8 +82,8 @@ export default function ProductList() {
               <h3 className="product_namn">{name}</h3>
             </Col>
             <Col xxl="12">
-              <p className="pris_p"><b>Pris:</b> {sweFormat(price)}</p>
             </Col>
+            <p className="pris_p"><b>Pris:</b> {sweFormat(price)}</p>
               <Row><button type="button" onClick={buy} className="btn_buy">KÖP</button></Row>
               <Row className="likes"><AddLike /></Row>
             </Card>

@@ -4,10 +4,10 @@
     margin: 15px 0;
 }
 
-h1 {
-    font-size: 4vw;
-    margin-bottom: 3%;
-    margin-top: 5%;
+.product_main_title {
+    display: flex;
+    margin-bottom: 50px;
+    margin-top: 35px;
 }
 
 h4 {
@@ -20,6 +20,7 @@ h4 {
 
 
 .pris_p {
+    align-items: center;
     margin-bottom: 10px;
     margin-top: 30px;
     color: #E97673;
@@ -29,7 +30,9 @@ h4 {
 /* LAYOUTEN */
 
 .product_list {
-    margin-top: 10%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
 }
 
 .product {
@@ -66,13 +69,13 @@ h4 {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 15px 15px;
-    border: 1px solid #E97673;
-    background-color:#E97673;
-    margin-bottom: 7%;
+    border: 1px solid #e4e4e4;
+    background-color:#e4e4e4;
+    margin-bottom: 4%;
 }
 
 select {
-    border: 1px solid #E97673;    
+    border: 1px solid #e4e4e4;
     padding: 15px 20px;
     margin: 10px;
     min-width: 330px;
@@ -86,7 +89,7 @@ select {
     margin: 10px;
     width: 330px;
     border-radius: 5px;
-    border: 1px solid #E97673;
+    border: 1px solid #e4e4e4;
 }
 
 
@@ -107,17 +110,14 @@ select option {
     width: 360px;
     min-height: 60vh;
     padding: 50px;
-    border: 1px solid #E97673;
-    /* background: #fff;
-    box-shadow: -3px -3px 7px #fff,
-                 3px 3px 5px #b2b1b1; */
+    border: 1px solid #e4e4e4;
 }
 
 .card:hover {
-    border: 2px solid #E97673;
+    border: 1px solid #E97673;
 }
 
 .ms-3 {
-    max-width:120px;
+    max-width:200px;
     margin-top: 10px;
 }
