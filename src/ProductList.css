@@ -73,18 +73,18 @@ h4 {
 
 select {
     border: 1px solid #E97673;    
-    padding: 10px 15px;
+    padding: 15px 20px;
     margin: 10px;
-    min-width: 300px;
+    min-width: 330px;
     border-radius: 5px;
     color: #989898;
 }
 
 
 .search_input {
-    padding: 9px 15px;
+    padding: 13px 20px;
     margin: 10px;
-    width: 300px;
+    width: 330px;
     border-radius: 5px;
     border: 1px solid #E97673;
 }

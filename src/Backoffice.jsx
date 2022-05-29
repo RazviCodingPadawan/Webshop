@@ -10,7 +10,7 @@ export default function Backoffice() {
 
   scrollRestore();
 
-  return <Container className="productList">
+  return <Container className="productList_backoffice">
  
     <h1>Welcome to backoffice</h1>
     <h3>The place where shit happens 💩</h3>

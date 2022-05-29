@@ -1,27 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
 
 .productDetail {
     display: flex;
     flex-direction: column;
-    width: 70%;
-    margin-top: 10%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6%;
+    margin-bottom: 4%;
 }
 
 h1 {
-    font-family: 'Russo One', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
     color: #3a3a3a;
     text-align: center;
-    padding: 10px 0;
 }
 
-.mt-2 {
+p {
+    padding: 25px;
+    text-align: justify;
+}
+
+
+.mt-4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 15px;
-    letter-spacing: 2.5px;
+    margin-bottom: 10px;
 }
 
 .btn-primary {
@@ -51,3 +65,8 @@ a {
     margin-top: 20px;
 }
 
+.me-6 {
+    padding: 10px 15px;
+    color: #a3a3a3;
+    border: 1px solid #E97673;
+}
