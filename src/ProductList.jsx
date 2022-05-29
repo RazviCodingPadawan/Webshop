@@ -21,12 +21,6 @@ export default function ProductList() {
     navigate(`/product-detail/${id}`);
   }
 
-  function buy() {
-    // Add the product to the cart
-    add(product, localState.buyQuantity);
-    // Show the cart
-    navigate('/shopping-cart');
-  }
 
   const [searchTerm, setSearchTerm] = useState('');
   const [sortOrder, setSortOrder] = useState('name');
@@ -51,6 +45,13 @@ export default function ProductList() {
     if(sortOrder === 'priceDesc'){
       return productA.price < productB.price ? 1 : -1;
     }
+  }
+
+  function buy() {
+    // Add the product to the cart
+    add(product, localState.buyQuantity);
+    // Show the cart
+    navigate('/shopping-cart');
   }
 
   return <Container className="product_list">

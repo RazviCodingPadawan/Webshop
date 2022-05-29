@@ -18,6 +18,7 @@
     right: 25px;
 }
 
+
 .basic-navbar-nav {
     background: rgba(237, 218, 7, 0.9);
 }
@@ -43,6 +44,15 @@
     margin: 30px;
 }
 
+/* .mr-auto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(240, 225, 66, 0.9);
+    width: 92%;
+    padding: 10px 0;
+} */
+
 
 .navbar-light .navbar-nav .nav-link {
     color: #3a3a3a;
@@ -56,6 +66,10 @@
 .btn_cart,
 .btn_login {
     min-width: 140px;
+}
+
+.navbar-toggler {
+    margin-right: 25px;
 }
 
 /*
