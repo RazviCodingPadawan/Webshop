@@ -30,7 +30,7 @@ module.exports = app => {
 
       // open file with 'fs' to enable it to be 
       // saved as a file
-      let fileData = fs.readFileSync(file.path)
+      let fileData = fs.readFileSync(file.filepath)
       fs.writeFileSync(
         path.join(__dirname, '../public', 'images', 'products', fields.id + '.jpg'),
         fileData);
