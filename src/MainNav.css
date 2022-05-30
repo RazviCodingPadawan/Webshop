@@ -75,6 +75,10 @@
     margin-right: 25px;
 }
 
+.navbar-nav.mr-auto {
+    background-color: #fff !important;
+}
+
 /*
 .cart {
     padding: 20px 20px;
