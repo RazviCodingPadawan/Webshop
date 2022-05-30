@@ -44,6 +44,7 @@ export default function ProductDetail() {
   }
 
   return <Container className="productDetail">
+    <div className="product_detail_container">
     <Row><Col>
       <Link to={`/product-list`}>
         <button type="button" className="btn_login detail_btn">Tillbaka till listan</button>
@@ -61,5 +62,6 @@ export default function ProductDetail() {
       <button type="button" onClick={buy} className="btn_login">Köp</button>
       <input style={{ width: 140 }} className="float-end mt-3 me-6" type="number" {...localState.bind('buyQuantity')} />
     </Col></Row>
+    </div>
   </Container>
 }

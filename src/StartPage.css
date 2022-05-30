@@ -10,7 +10,7 @@
     height: 100vh;
     background-image: url('./images/pink.jpg');
     background-repeat: cover;
-    background-size: 100% 100vh;
+    background-size: 100% 100%;
 }
 
 .main_text {
