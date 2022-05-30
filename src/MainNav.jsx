@@ -1,6 +1,7 @@
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import './MainNav.css'
+import './MainNav.scss'
 import Logo from "./images/LOGO.png";
 
 import {useStates} from './utilities/states';
@@ -24,19 +25,18 @@ export default function MainNav() {
   // What is the smartest way to recreate that functionality
   // (adding an active CSS class to the active menu choice)
 
-  return <Navbar fixed="top" expand="lg" className="mb-4">
-    <Container>
-      <Navbar.Brand className="logo_text" href="#home"><img src={Logo}/></Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="me-auto">
-          <Link className="nav-link hem" to="/">HEM</Link>
-          <Link className="nav-link products" to="/product-list">PRODUKTER</Link>
-          <Link className="nav-link products" to="/backoffice">BACKOFFICE</Link>
-        </Nav>
-        <Link className="nav-link" to="/shopping-cart"><button className="cart">🛒 {totalNumberOfProductsInCart}</button></Link>
-      </Navbar.Collapse>
-    </Container>
-  </Navbar>
+  return <Navbar fixed="top" bg="" variant="" expand="lg" className="navbar navbar-light mb-4">
+            <Navbar.Brand className="logo_text" href="#home"><img src={Logo} style={{ height: 90 }}/></Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="navbar-nav mr-auto">
+                <Link className="nav-link hem" to="/">HEM</Link>
+                <Link className="nav-link products" to="/product-list">PRODUKTER</Link>
+                <Link className="nav-link products" to="/backoffice">BACKOFFICE</Link>
+                <Link className="nav-link" to="/shopping-cart"><button className="btn_cart">🛒 {totalNumberOfProductsInCart}</button></Link>
+                <Link className="nav-link" to="/login"><button className="btn_login"> Login</button></Link>
+              </Nav>
+            </Navbar.Collapse>
+         </Navbar>
 }
 

@@ -1,49 +1,104 @@
 /* TEXTER */
-.product_name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4vw;
-    color: #E97673;
+.product_namn {
+    color: #3a3a3a;
+    margin: 15px 0;
 }
 
-h3 {
-    color:#3a3a3a;
+.product_main_title {
+    display: flex;
+    margin-bottom: 50px;
+    margin-top: 35px;
+}
+
+h4 {
+    margin-bottom: 0;
+    margin-left: 15px;
+    color: #fff;
+    font-weight:bold;
+    font-size: 20px;
 }
 
 
 .pris_p {
-    margin-bottom: 30px;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
     color: #E97673;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
 }
 
 /* LAYOUTEN */
 
-.product_items {
+.product_list {
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.product {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.productList {
+.btn_buy {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 15%;
+    width: 100px;
+    height: 35px;
+    background-color: #E97673;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
 }
 
-.col-xxl-12 {
-    margin-top: 7vw;
+.btn_buy:hover {
+    background-color: #fff;
+    color: #E97673;
+    border: 1px solid #E97673;
+}
+
+.search_select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px 15px;
+    border: 1px solid #e4e4e4;
+    background-color:#e4e4e4;
+    margin-bottom: 4%;
 }
 
 select {
-    border: 1px solid #ebebeb;
-    padding: 7px 15px;
-    margin-left: 0;
-    margin-top: 15px;
-    margin-bottom: 20px;
+    border: 1px solid #e4e4e4;
+    padding: 15px 20px;
+    margin: 10px;
+    min-width: 330px;
+    border-radius: 5px;
+    color: #989898;
+}
+
+
+.search_input {
+    padding: 13px 20px;
+    margin: 10px;
+    width: 330px;
+    border-radius: 5px;
+    border: 1px solid #e4e4e4;
+}
+
+
+::placeholder {
+    color: #989898;
+}
+
+select option {
+    color: #E97673;
 }
 
 .card {
@@ -52,18 +107,17 @@ select {
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 100%;
-    padding: 0 60px;
-    border-radius: 7px;
-    border: 1px solid #e7e7e7;
-    background: #fff;
-    box-shadow: -3px -3px 7px #fff,
-                 3px 3px 5px #b2b1b1;
+    width: 360px;
+    min-height: 60vh;
+    padding: 50px;
+    border: 1px solid #e4e4e4;
 }
 
 .card:hover {
-    background: #fff;
-    box-shadow: inset -3px -3px 7px #fff,
-              inset 3px 3px 5px #b2b1b1;
-    animation-delay: 2s;
+    border: 1px solid #E97673;
+}
+
+.ms-3 {
+    max-width:200px;
+    margin-top: 10px;
 }

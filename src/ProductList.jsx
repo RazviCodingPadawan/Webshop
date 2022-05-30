@@ -21,12 +21,6 @@ export default function ProductList() {
     navigate(`/product-detail/${id}`);
   }
 
-  function buy() {
-    // Add the product to the cart
-    add(product, localState.buyQuantity);
-    // Show the cart
-    navigate('/shopping-cart');
-  }
 
   const [searchTerm, setSearchTerm] = useState('');
   const [sortOrder, setSortOrder] = useState('name');
@@ -37,7 +31,7 @@ export default function ProductList() {
   // return false if you do not want to keep it
   function search(product){
      return product.name.toLowerCase().includes(searchTerm.toLowerCase())
-     //  ||  product.description.toLowerCase().includes(searchTerm.toLowerCase());
+      ||  product.description.toLowerCase().includes(searchTerm.toLowerCase());
   }
 
   // Called below (in the jsx/html)
@@ -53,26 +47,34 @@ export default function ProductList() {
     }
   }
 
-  return <Container className="productList">
-    <Row><Col><h1>PRODUKTER</h1></Col></Row>
-    <Row className="mb-3">
-      <Col><CategorySelect showAllOption bindTo={[s, 'chosenCategoryId']} /></Col>
-      <Col>
-        Sortera: 
-        <select value={sortOrder} onChange={event => setSortOrder(event.target.value)}>
-          <option value="name">Namn</option>
-          <option value="priceAsc">Pris (stigande)</option>
-          <option value="priceDesc">Pris (fallande)</option>
-        </select>
-      </Col>
-    </Row>
+  function buy() {
+    // Add the product to the cart
+    add(product, localState.buyQuantity);
+    // Show the cart
+    navigate('/shopping-cart');
+  }
+
+  return <Container className="product_list">
+    
+    <Row><Col><h1 className="product_main_title">Produkter</h1></Col></Row>
+      
     <Row>
-      <input type="text" placeholder='🪕search' value={searchTerm} onChange={event => setSearchTerm(event.target.value)} />
-      {s.products.filter(product =>
-      s.chosenCategoryId === 0 /*alla*/
-      || s.chosenCategoryId === product.categoryId
-      ).filter(search).sort(sortOurProducts).map(({ id, name, price }) =>
-      <Col xxl="4" md="3">
+        <Col className="search_select">
+            <select className="search_price" value={sortOrder} onChange={event => setSortOrder(event.target.value)}>
+              <option value="name">Namn</option>
+              <option value="priceAsc">Pris (stigande)</option>
+              <option value="priceDesc">Pris (fallande)</option>
+            </select>
+            <CategorySelect className="search_id" showAllOption bindTo={[s, 'chosenCategoryId']} />
+            <input className="search_input" type="text" placeholder='Search' value={searchTerm} onChange={event => setSearchTerm(event.target.value)} />
+        </Col>
+      </Row>
+      <Row>
+              {s.products.filter(product =>
+              s.chosenCategoryId === 0 /*alla*/
+              || s.chosenCategoryId === product.categoryId
+              ).filter(search).sort(sortOurProducts).map(({ id, name, price }) =>
+      <Col>
         <Container className="product">
           <Card className="product_items">
             <Col xxl="12" key={id} onClick={() => showDetail(id)}>
@@ -81,16 +83,15 @@ export default function ProductList() {
               <h3 className="product_namn">{name}</h3>
             </Col>
             <Col xxl="12">
-              <p className="pris_p"><b>Pris:</b> {sweFormat(price)}</p>
             </Col>
+            <p className="pris_p"><b>Pris:</b> {sweFormat(price)}</p>
+              <Row><button type="button" onClick={buy} className="btn_buy">KÖP</button></Row>
               <Row className="likes"><AddLike /></Row>
             </Card>
         </Container>
-      </Col>
-      
-    )}
+      </Col> 
+      )}    
     </Row>
-    
-   
+
   </Container>
 }
