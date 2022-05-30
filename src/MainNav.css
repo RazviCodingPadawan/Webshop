@@ -31,8 +31,16 @@
     color: #208077;
 }
 
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .hem,
 .products {
+    align-items: center;
     padding: 15px 10px;
     margin: 30px;
 }

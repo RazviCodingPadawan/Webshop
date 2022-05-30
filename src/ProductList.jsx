@@ -54,8 +54,7 @@ export default function ProductList() {
     navigate('/shopping-cart');
   }
 
-  return <Container className="product_list">
-    
+  return <Container className="product_list">    
     <Row><h1 className="product_main_title">PRODUKTER</h1></Row>
       
     <Row>
@@ -92,6 +91,5 @@ export default function ProductList() {
       </Col> 
       )}    
     </Row>
-
   </Container>
 }
