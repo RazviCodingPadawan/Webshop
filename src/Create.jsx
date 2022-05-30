@@ -33,7 +33,7 @@ const Create = () => {
 
   return (
     <div className='create_product'>
-      <Form onSubmit={SubmitData}>
+      <Form className='shadow-lg p-3 mb-5 bg-white rounded' onSubmit={SubmitData}>
         <label className='create_label'>Namn</label>
         <input className='create_input' value={mobilData.name} name="name" onChange={handleInputData} placeholder='Namn' />
 
