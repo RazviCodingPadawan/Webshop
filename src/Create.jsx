@@ -32,18 +32,18 @@ const Create = () => {
   }
 
   return (
-    <div className='productList'>
+    <div className='create_product'>
       <Form onSubmit={SubmitData}>
-        <label>Namn</label>
-        <input value={mobilData.name} name="name" onChange={handleInputData} placeholder='Namn' />
+        <label className='create_label'>Namn</label>
+        <input className='create_input' value={mobilData.name} name="name" onChange={handleInputData} placeholder='Namn' />
 
-        <label>Beskrivning</label>
-        <input value={mobilData.description} name="description" onChange={handleInputData} placeholder='Beskrivning' />
+        <label className='create_label'>Beskrivning</label>
+        <input className='create_input' value={mobilData.description} name="description" onChange={handleInputData} placeholder='Beskrivning' />
 
-        <label>Pris</label>
-        <input value={mobilData.price} name="price" onChange={handleInputData} placeholder='Pris' />
+        <label className='create_label'>Pris</label>
+        <input className='create_input' value={mobilData.price} name="price" onChange={handleInputData} placeholder='Pris' />
 
-        <Button type='submit'>Create</Button>
+        <Button className="btn_login create" type='submit'>CREATE</Button>
       </Form>
     </div>
   )

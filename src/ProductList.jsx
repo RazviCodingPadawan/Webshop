@@ -56,10 +56,10 @@ export default function ProductList() {
 
   return <Container className="product_list">
     
-    <Row><Col><h1 className="product_main_title">Produkter</h1></Col></Row>
+    <Row><h1 className="product_main_title">PRODUKTER</h1></Row>
       
     <Row>
-        <Col className="search_select">
+        <Col className="search_select shadow p-3 mb-5">
             <select className="search_price" value={sortOrder} onChange={event => setSortOrder(event.target.value)}>
               <option value="name">Namn</option>
               <option value="priceAsc">Pris (stigande)</option>
@@ -76,7 +76,7 @@ export default function ProductList() {
               ).filter(search).sort(sortOurProducts).map(({ id, name, price }) =>
       <Col>
         <Container className="product">
-          <Card className="product_items">
+          <Card className="product_items shadow p-3 mb-5 rounded-bottom" >
             <Col xxl="12" key={id} onClick={() => showDetail(id)}>
               {/* <Row className="favorites"><Favorites /></Row> */}
               <img onError={event => missingImage(event, name)} className="ms-3" style={{ width: 200, height: 200, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
@@ -84,8 +84,8 @@ export default function ProductList() {
             </Col>
             <Col xxl="12">
             </Col>
-            <p className="pris_p"><b>Pris:</b> {sweFormat(price)}</p>
-              <Row><button type="button" onClick={buy} className="btn_buy">KÖP</button></Row>
+            <p className="pris_p"><b>PRIS:</b> {sweFormat(price)}</p>
+              <Row><button type="button" onClick={buy} className="btn_login">KÖP</button></Row>
               <Row className="likes"><AddLike /></Row>
             </Card>
         </Container>
