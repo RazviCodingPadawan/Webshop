@@ -26,3 +26,10 @@ input,
 label {
   width: 100%;
 }
+
+.productList video, .productList canvas, .productList img {
+  width: 320px;
+  height: 240px;
+  border: 1px solid black;
+  display: block;
+}
