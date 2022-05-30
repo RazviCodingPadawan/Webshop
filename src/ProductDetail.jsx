@@ -46,7 +46,7 @@ export default function ProductDetail() {
   return <Container className="productDetail">
     <Row><Col>
       <Link to={`/product-list`}>
-        <button type="button" className="my-4 btn btn-primary">Tillbaka till listan</button>
+        <button type="button" className="btn_login detail_btn">Tillbaka till listan</button>
         <hr />
       </Link>
     </Col></Row>
@@ -58,8 +58,8 @@ export default function ProductDetail() {
     </Col></Row>
     <Row><Col><p><b>Pris: {sweFormat(price)}</b></p></Col></Row>
     <Row><Col className="mt-4 bottom">
-      <button type="button" onClick={buy} className="btn btn-primary float-end">Köp</button>
-      <input style={{ width: 200 }} className="float-end mt-3 me-6" type="number" {...localState.bind('buyQuantity')} />
+      <button type="button" onClick={buy} className="btn_login">Köp</button>
+      <input style={{ width: 140 }} className="float-end mt-3 me-6" type="number" {...localState.bind('buyQuantity')} />
     </Col></Row>
   </Container>
 }

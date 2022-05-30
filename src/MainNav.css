@@ -4,24 +4,17 @@
     display: flex;
     position: fixed;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
     height: 110px;
-    background-color: rgba(254, 239, 4, 0.9);
+    background-color: rgba(254, 239, 4, 0.8);
 }
 
-.navbar-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 25px;
-}
 
 
 .basic-navbar-nav {
     background: rgba(237, 218, 7, 0.9);
 }
+
 
 .nav-link {
     display: flex;

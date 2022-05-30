@@ -9,11 +9,12 @@
     position: relative;
     align-items: center;
     justify-content: center;
-    margin-top: 7%;
-    height:70vh;
+    margin-top: 5%;
+    height:90vh;
     font-size: 13.5vw;
     background-image: url('./images/5965887.jpg');
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     color: #FEEF04;
 }
 
