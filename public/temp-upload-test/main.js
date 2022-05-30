@@ -131,6 +131,7 @@ function getGeolocation() {
 // function that stores file and address 
 // in FormData, and then sends it to the server
 async function uploadPicture() {
+  
   let formData = new FormData()
 
   formData.append('file', picture, Date.now() + '.jpg')
