@@ -65,7 +65,7 @@ export default function ProductList() {
               <option value="priceDesc">Pris (fallande)</option>
             </select>
             <CategorySelect className="search_id" showAllOption bindTo={[s, 'chosenCategoryId']} />
-            <input className="search_input" type="text" placeholder='Search' value={searchTerm} onChange={event => setSearchTerm(event.target.value)} />
+            => setSearchTerm(event.target.value)} />
         </Col>
       </Row>
       <Row>
