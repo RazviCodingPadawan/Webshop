@@ -56,9 +56,9 @@ export default function ShoppingCart() {
     <Row>
       <Col>
         <Link className="float-end text-decoration-none" to={`/product-list`}>
-          <button type="button" className="btn btn-primary">Tillbaka</button>
+          <button type="button" className="btn_login">Tillbaka</button>
         </Link>
-        {s.cartContents.length ? <button onClick={empty} type="button" className="btn btn-primary float-end me-3">Töm kundvagnen</button> : <></>}
+        {s.cartContents.length ? <button onClick={empty} type="button" className="btn_login btn-primary float-end me-3">Töm kundvagnen</button> : <></>}
       </Col>
     </Row>
   </Container>

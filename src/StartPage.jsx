@@ -1,6 +1,5 @@
 import './StartPage.css'
 import 'animate.css';
-import Footer from './Footer/Footer';
 
 
 export default function StartPage() {
@@ -9,6 +8,5 @@ export default function StartPage() {
             <div className="main_text">
               <h1 className='main_name'>Phonehub!</h1><br></br>
               <h3 className="span">”Connect with the world”</h3></div>
-              <Footer />
         </div>
 }
