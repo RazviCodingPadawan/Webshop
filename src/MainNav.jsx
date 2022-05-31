@@ -20,6 +20,7 @@ export default function MainNav() {
     totalNumberOfProductsInCart += cartRow.quantity;
     console.log('name',cartRow.product.name,'quantity', cartRow.quantity, 'totalNumber...',totalNumberOfProductsInCart)
   }
+  
 
   // React Router DOM v6 got rid of the NavLink component
   // What is the smartest way to recreate that functionality
