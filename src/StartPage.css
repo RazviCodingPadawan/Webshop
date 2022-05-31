@@ -19,18 +19,15 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-width: 45%;
-    min-height: 35%;
     margin-top: 3%;
     padding-bottom: 5%;
     padding-top: 4%;
-    background-color: rgba(253, 239, 5, 0.7);
     animation-duration: 2s;
 }
 
 .main_name {
     font-size: 3.5vw;
-    color: #3a3a3a;
+    color: #fff;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 10px;
