@@ -8,6 +8,7 @@ import { sweFormat } from './utilities/currencyFormatter';
 import { missingImage } from './utilities/handleMissingImage';
 import {AddLike} from './components/AddLike'
 // import {Favorites} from './components/Favorites'
+import  './utilities/shoppingCartLogic';
 import './ProductList.css'
 
 export default function ProductList() {
@@ -51,7 +52,7 @@ export default function ProductList() {
     // Add the product to the cart
     add(product, localState.buyQuantity);
     // Show the cart
-    navigate('./ShopingCart.jsx');
+    navigate('/shopping-cart');
   }
 
   return <Container className="product_list">    
