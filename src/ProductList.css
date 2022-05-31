@@ -6,8 +6,15 @@
 
 .product_main_title {
     display: flex;
-    margin-bottom: 50px;
-    margin-top: 35px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height:70vh;
+    font-size: 11.5vw;
+    background-image: url('./images/5965887.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #FEEF04;
 }
 
 h4 {
@@ -30,9 +37,11 @@ h4 {
 /* LAYOUTEN */
 
 .product_list {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 20%;
 }
 
 .product {
@@ -69,9 +78,9 @@ h4 {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 15px 15px;
-    border: 1px solid #e4e4e4;
-    background-color:#e4e4e4;
-    margin-bottom: 4%;
+    background-color: #757676	;
+    margin-top: 6%;
+    margin-bottom: 6%;
 }
 
 select {
@@ -79,7 +88,6 @@ select {
     padding: 15px 20px;
     margin: 10px;
     min-width: 330px;
-    border-radius: 5px;
     color: #989898;
 }
 
@@ -88,7 +96,6 @@ select {
     padding: 13px 20px;
     margin: 10px;
     width: 330px;
-    border-radius: 5px;
     border: 1px solid #e4e4e4;
 }
 
@@ -98,7 +105,7 @@ select {
 }
 
 select option {
-    color: #E97673;
+    color: #989898;
 }
 
 .card {
@@ -107,17 +114,18 @@ select option {
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 360px;
-    min-height: 60vh;
-    padding: 50px;
-    border: 1px solid #e4e4e4;
+    width: 350px;
+    min-height: 85vh;
+    padding: 20px 50px;
+    border: none;
 }
 
 .card:hover {
-    border: 1px solid #E97673;
+    box-shadow: 0 12px 21px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition: all .55s ease-in-out;
 }
 
 .ms-3 {
-    max-width:200px;
+    max-width: 90%;
     margin-top: 10px;
 }

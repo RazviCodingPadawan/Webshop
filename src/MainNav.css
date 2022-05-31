@@ -4,18 +4,9 @@
     display: flex;
     position: fixed;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
-    height: 100px;
-    background-color: rgba(237, 218, 7, 0.9);
-}
-
-.navbar-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 25px;
+    height: 110px;
+    background-color: rgba(254, 239, 4, 0.8);
 }
 
 
@@ -26,7 +17,9 @@
 .nav-link {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
+
 
 .navbar-brand {
     font-size: 2rem;
@@ -38,8 +31,16 @@
     color: #208077;
 }
 
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .hem,
 .products {
+    align-items: center;
     padding: 15px 10px;
     margin: 30px;
 }
@@ -71,6 +72,7 @@
 .navbar-toggler {
     margin-right: 25px;
 }
+
 
 /*
 .cart {

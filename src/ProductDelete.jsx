@@ -49,6 +49,6 @@ export default function ProductDelete() {
         <CategorySelect bindTo={[product, 'categoryId']} />
       </label>
     </Col></Row>
-    <button type="button" onClick={deleteProduct} className="my-4 btn btn-primary float-end">Radera</button>
+    <button type="button" onClick={deleteProduct} className="my-4 btn_login float-end">Radera</button>
   </Container>
 }

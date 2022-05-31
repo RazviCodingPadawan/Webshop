@@ -1,0 +1,55 @@
+.picture_capture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15%;
+    padding: 0 20px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bild_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.product_edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.edit_page_text {
+    margin-top: 20px;
+}
+
+label {
+    text-align: center;
+    margin: 15px 0;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.form-control {
+    width:550px;
+    padding: 20px;
+    margin: 10px;
+}
