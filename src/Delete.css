@@ -1,0 +1,38 @@
+.product_delete {
+    margin-top: 20%;
+}
+
+.product-detail-container {
+    margin-top: 20px;
+}
+
+.product_edit_h3 {
+    text-align: center;
+}
+
+.product_price_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.delete_btn {
+    margin: 40px 0;
+    width: 330px;
+}
+
+.h3_delete {
+    text-align: center;
+    margin: 35px 0;
+}
+
+.p_delete {
+    margin: 20px 0;
+}
+
+.delete_btn {
+    margin: 10px 0 50px 0;
+}
+

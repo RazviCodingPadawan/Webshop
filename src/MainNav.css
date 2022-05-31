@@ -2,13 +2,16 @@
 
 .navbar {
     display: flex;
-    position: fixed;
+    flex-direction: row;
     align-items: center;
     width: 100%;
     height: 110px;
     background-color: rgba(254, 239, 4, 0.8);
 }
 
+.navbar-toggler {
+    margin-right: 10px;
+}
 
 .basic-navbar-nav {
     background: rgba(237, 218, 7, 0.9);

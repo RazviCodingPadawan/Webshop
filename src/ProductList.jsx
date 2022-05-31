@@ -55,7 +55,7 @@ export default function ProductList() {
     navigate('/shopping-cart');
   }
 
-  return <Container className="product_list">    
+  return <Container>    
     <Row><h1 className="product_main_title">PRODUKTER</h1></Row>
       
     <Row>
@@ -77,10 +77,11 @@ export default function ProductList() {
       <Col>
         <Container className="product">
           <Card className="product_items shadow p-3 mb-5 rounded-bottom" >
-            <Col xxl="12" key={id} onClick={() => showDetail(id)}>
+            <Col xxl="12">
               {/* <Row className="favorites"><Favorites /></Row> */}
               <img onError={event => missingImage(event, name)} className="ms-3" style={{ width: 200, height: 200, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
               <h3 className="product_namn">{name}</h3>
+              <button type="button" key={id} onClick={() => showDetail(id)} className="btn btn-visa">INFO</button>
             </Col>
             <Col xxl="12">
             </Col>

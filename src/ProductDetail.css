@@ -1,35 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap');
 
-.productDetail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-}
-
-.product_detail_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 150px;
-}
-
 h1 {
     font-size: 36px;
     font-weight: bold;
     color: #3a3a3a;
     text-align: center;
 }
-
-p {
-    margin: 20px;
-    padding: 25px;
-    text-align: justify;
-}
-
 
 .mt-4 {
     display: flex;
@@ -49,39 +25,16 @@ p {
 }
 
 .detail_btn {
-    width: 200px;
+    width: 140px;
 }
-
-
-/* .btn-primary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 65px;
-    margin: 5px 0 10px 0;
-    background-color: #E97673;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-}
-
-.btn-primary:hover {
-    background-color: #fff;
-    color: #E97673;
-    border: 1px solid #E97673;
-} */
 
 a {
     text-decoration: none;
-}
-
-.col {
-    margin-top: 10px;
 }
 
 .me-6 {
     padding: 10px 15px;
     color: #a3a3a3;
     border: 1px solid #a3a3a3;
+    margin-bottom: 30px;
 }

@@ -6,7 +6,7 @@ import CategorySelect from './CategorySelect';
 import { sweFormat } from './utilities/currencyFormatter';
 import { missingImage } from './utilities/handleMissingImage';
 import { Link } from "react-router-dom";
-import './ProductEdit.css'
+import './Delete.css'
 
 export default function Delete() {
 
@@ -19,27 +19,25 @@ export default function Delete() {
     navigate(`/product-delete/${id}`);
   }
 
-  return <Container className="product_edit" xxl="12">
-    <Row><Col><h1>PRODUKTER</h1></Col>
-      <Col><Link to="/backoffice">back to backoffice</Link></Col>
-    </Row>
+  return <Container>
+    <Row><h1>PRODUKTER</h1></Row>
+    <Row className="btn_login delete_btn"><Link to="/backoffice">Back ...</Link></Row>
     <Row className="mb-3"><Col><CategorySelect showAllOption bindTo={[s, 'chosenCategoryId']} /></Col></Row>
     {s.products.filter(product =>
       s.chosenCategoryId === 0 /*alla*/
       || s.chosenCategoryId === product.categoryId
     ).map(({ id, name, description, price }) =>
-      <Row className="product" key={id} onClick={() => showDetail(id)}>
-        <Card>
-          <Col xxl="12">
-            <h3>{name}</h3>
+      <Col>
+          <Col className="product-detail-container">
+            <h3 className="h3_delete">{name}</h3>
             <img onError={event => missingImage(event, name)} className="float-end ms-3" style={{ width: 300, height: 300, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
             <p>{description}</p>
           </Col>
-          <Col xxl="12">
-            <p><b>Pris:</b> {sweFormat(price)}</p>
+          <Col className="product_price_btn">
+            <Row className="p_delete"><p><b>Pris:</b> {sweFormat(price)}</p></Row>
+            <Row><button type="button" key={id} onClick={() => showDetail(id)} className="btn_login delete_btn">Redigera</button></Row>
           </Col>
-        </Card>
-      </Row>
+      </Col>
     )}
   </Container>
 }

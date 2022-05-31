@@ -24,7 +24,7 @@ export default function ProductDelete() {
   
     }
 
-  return <Container className="productList">
+  return <Container>
     <Row><Col><h1>{name}</h1></Col></Row>
     <Row><Col><p>{description}</p></Col></Row>
     <Row><Col><p>Pris: {price}</p></Col></Row>

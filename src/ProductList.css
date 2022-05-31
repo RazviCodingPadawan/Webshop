@@ -9,12 +9,8 @@
     position: relative;
     align-items: center;
     justify-content: center;
-    height:70vh;
     font-size: 11.5vw;
-    background-image: url('./images/5965887.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    color: #FEEF04;
+    color: #3a3a3a;
 }
 
 h4 {
@@ -31,7 +27,7 @@ h4 {
     margin-bottom: 10px;
     margin-top: 30px;
     color: #E97673;
-    font-size: 1.2vw;
+    font-size: 1.2rem;
 }
 
 /* LAYOUTEN */
@@ -50,6 +46,7 @@ h4 {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 40px;
 }
 
 .btn_buy {
@@ -80,7 +77,6 @@ h4 {
     padding: 15px 15px;
     background-color: #757676	;
     margin-top: 6%;
-    margin-bottom: 6%;
 }
 
 select {
@@ -128,4 +124,17 @@ select option {
 .ms-3 {
     max-width: 90%;
     margin-top: 10px;
+}
+
+.btn-visa {
+    border:#E97673 1px solid;
+    border-radius: 2px;
+    background:none;
+    padding: 5px 10px;
+    margin: 10px 0;
+    width: 120px;
+}
+
+.btn-visa:hover {
+    border: 1px solid #757676;
 }
