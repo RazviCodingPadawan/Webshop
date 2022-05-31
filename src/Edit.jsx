@@ -35,7 +35,7 @@ export default function Edit() {
             <h3 className="edit_h3">{name}</h3>
             <img onError={event => missingImage(event, name)} className="float-end ms-3" style={{ width: 300, height: 300, objectFit: 'contain' }} src={`/images/products/${id}.jpg`} />
             <p>{description}</p>
-            <Row><button class="btn_login edit_content" key={id} onClick={() => showDetail(id)}>EDIT</button></Row>
+            <Row><button className="btn_login edit_content" key={id} onClick={() => showDetail(id)}>EDIT</button></Row>
           </Col>
           <Col xxl="12">
             <p><b>Pris:</b> {sweFormat(price)}</p>
