@@ -4,7 +4,7 @@ const restApi = require('./rest-api');
 
 const imageUpload = require('./image-upload');
 
-const port = 4000;
+const port = process.env.PORT || 4000;
 const dbPath = '../database/db.sqlite3';
 
 async function start() {
