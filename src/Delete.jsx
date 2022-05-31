@@ -6,8 +6,7 @@ import CategorySelect from './CategorySelect';
 import { sweFormat } from './utilities/currencyFormatter';
 import { missingImage } from './utilities/handleMissingImage';
 import { Link } from "react-router-dom";
-import './ProductList.css'
-import './Backoffice.css'
+import './ProductEdit.css'
 
 export default function Delete() {
 
@@ -20,7 +19,7 @@ export default function Delete() {
     navigate(`/product-delete/${id}`);
   }
 
-  return <Container className="productList">
+  return <Container className="product_edit" xxl="12">
     <Row><Col><h1>PRODUKTER</h1></Col>
       <Col><Link to="/backoffice">back to backoffice</Link></Col>
     </Row>
