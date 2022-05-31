@@ -10,11 +10,9 @@
 }
 
 
-
 .basic-navbar-nav {
     background: rgba(237, 218, 7, 0.9);
 }
-
 
 .nav-link {
     display: flex;
@@ -75,9 +73,6 @@
     margin-right: 25px;
 }
 
-.navbar-nav.mr-auto {
-    background-color: #fff !important;
-}
 
 /*
 .cart {

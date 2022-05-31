@@ -42,7 +42,7 @@ h4 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 15%;
 }
 
 .product {
@@ -106,7 +106,7 @@ select {
 }
 
 select option {
-    color: #E97673;
+    color: #989898;
 }
 
 .card {
@@ -116,7 +116,7 @@ select option {
     justify-content: center;
     text-align: center;
     width: 350px;
-    min-height: 80vh;
+    min-height: 85vh;
     padding: 20px 50px;
     border: none;
 }

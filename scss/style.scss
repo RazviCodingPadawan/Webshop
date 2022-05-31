@@ -26,3 +26,10 @@ input,
 label {
   width: 100%;
 }
+
+.productList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
