@@ -8,6 +8,7 @@ import { sweFormat } from './utilities/currencyFormatter';
 import { missingImage } from './utilities/handleMissingImage';
 import {AddLike} from './components/AddLike'
 // import {Favorites} from './components/Favorites'
+import  './utilities/shoppingCartLogic';
 import './ProductList.css'
 
 export default function ProductList() {
