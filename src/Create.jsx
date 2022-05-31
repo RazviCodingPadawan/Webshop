@@ -1,8 +1,7 @@
-
-   
+import { useStates } from './utilities/states';
+import { captureImage, initializeMedia, uploadPicture } from './utilities/imageCapture';
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import axios from 'axios'
 import './Create.css'
 
 const Create = () => {
@@ -31,9 +30,39 @@ const Create = () => {
     console.log(result)
   }
 
+  
+  // a local state only for this component
+  let l = useStates({
+    captureMode: true,
+    replaceImage: false
+  })
+    // initialize media (start talking to camera)
+  // when the component loads
+  useState(() => {
+    initializeMedia();
+  }, [])
+
+  async function save() {
+    // Save to db
+    await product.save();
+    // upload image if the image should be replaced
+    l.replaceImage && await uploadPicture(id);
+    // Navigate to detail page
+    navigate(`/backoffice/edit`);
+  }
+  function takeImage() {
+    captureImage();
+    l.captureMode = false;
+  }
+
+
   return (
-    <div className='create_product'>
+    <div className='create_product productList'>
       <Form className='shadow-lg p-3 mb-5 bg-white rounded' onSubmit={SubmitData}>
+        <video style={{ display: l.captureMode ? 'block' : 'none' }} autoPlay></video>
+        <canvas width="320" height="240" style={{ display: !l.captureMode ? 'block' : 'none' }}></canvas>
+        <button className='btn btn-primary mt-3 mb-5' onClick={(takeImage)}>Ta bild</button>
+
         <label className='create_label'>Namn</label>
         <input className='create_input' value={mobilData.name} name="name" onChange={handleInputData} placeholder='Namn' />
 
