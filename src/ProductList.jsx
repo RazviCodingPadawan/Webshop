@@ -51,7 +51,7 @@ export default function ProductList() {
     // Add the product to the cart
     add(product, localState.buyQuantity);
     // Show the cart
-    navigate('/shopping-cart');
+    navigate('./ShopingCart.jsx');
   }
 
   return <Container className="product_list">    
