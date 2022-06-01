@@ -26,7 +26,7 @@ export default function MainNav() {
   // What is the smartest way to recreate that functionality
   // (adding an active CSS class to the active menu choice)
 
-  return <Navbar className="navbar" expand="lg"fixed="top" >
+  return <Navbar className="navbar" variant="light" expand="lg"fixed="top" >
             <Navbar.Brand className="logo_text" href="#home"><img src={Logo} style={{ height: 90 }} alt="logo" /></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
