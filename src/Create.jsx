@@ -62,7 +62,7 @@ const Create = () => {
 
   return (
     <Container className="capture">
-      <Form className='shadow-lg p-3 mb-5 bg-white rounded' onSubmit={SubmitData}>
+      <Form className='shadow-lg p-3 mb-5 bg-white rounded capture' onSubmit={SubmitData}>
         <video style={{ display: l.captureMode ? 'block' : 'none' }} autoPlay></video>
         <canvas width="320" height="240" style={{ display: !l.captureMode ? 'block' : 'none' }}></canvas>
         <button className='btn btn-primary mt-3 mb-5' onClick={(takeImage)}>Ta bild</button>

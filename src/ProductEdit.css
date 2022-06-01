@@ -44,7 +44,7 @@ label {
 }
 
 .btn_edit_delete {
-    width: 330px;
+    width: 220px;
 }
 
 .bottom_edit {
@@ -60,4 +60,5 @@ label {
 
 .edit_save_btn {
     margin: 20px 0;
+    width: 160px;
 }

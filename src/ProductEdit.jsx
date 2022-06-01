@@ -45,7 +45,7 @@ export default function ProductEdit() {
   }
 
 
-  return <Container className="capture">
+  return <Container className="product_edit capture">
     {l.replaceImage ?
       <Row><Col>
         <video style={{ display: l.captureMode ? 'block' : 'none' }} autoPlay></video>
@@ -54,30 +54,31 @@ export default function ProductEdit() {
       </Col></Row> : <Row><Col>
         <img className='img_capture' src={`/images/products/${id}.jpg`} />
         <button className='btn_login' onClick={() => l.replaceImage = true}>Byt bilden</button>
-      </Col></Row>}
- 
-        <Row><h1 className='edit_page_text'>{name}</h1></Row>
-      <Col>
-        <label className="mt-3">Skriva nytt Namn:
-          <input className="form-control" {...product.bind('name')} />
-        </label>
-      </Col>
-      <Col>
+      </Col></Row>} 
+    <Row><Col><h1 className='edit_page_text'>{name}</h1></Col></Row>
+    <Row><Col><p>{description}</p></Col></Row>
+    <Row><Col><p>Pris: {price}</p></Col></Row>
+    <Row><Col>
+      <label className="mt-3">Skriva nytt Namn:
+        <input className="form-control" {...product.bind('name')} />
+      </label>
+    </Col></Row>
+    <Row><Col>
       <label className="mt-3">Skriva nytt Beskrivning:
         <textarea className="form-control" {...product.bind('description')} />
       </label>
-    </Col>
-    <Col>
+    </Col></Row>
+    <Row><Col>
       <label className="mt-3">Pris:
         <input type="number" className="form-control" {...product.bind('price')} />
       </label>
-    </Col>
-    <Col className="bottom_edit">
+    </Col></Row>
+    <Row className="mt-3"><Col>
       <label>
         Välja Kategori:&nbsp;
+        <CategorySelect bindTo={[product, 'categoryId']} />
       </label>
-      <CategorySelect className="bottom_edit_select" bindTo={[product, 'categoryId']} />
-    </Col>
+    </Col></Row>
     <button type="button" onClick={save} className="btn_login edit_save_btn">Spara</button>   
   </Container>
 }

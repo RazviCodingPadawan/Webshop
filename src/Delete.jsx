@@ -35,7 +35,7 @@ export default function Delete() {
           </Col>
           <Col className="product_price_btn">
             <Row className="p_delete"><p><b>Pris:</b> {sweFormat(price)}</p></Row>
-            <Row><button type="button" key={id} onClick={() => showDetail(id)} className="btn_login delete_btn">Redigera</button></Row>
+            <Row><button type="button" key={id} onClick={() => showDetail(id)} className="btn_login btn btn-visa">Redigera</button></Row>
           </Col>
       </Col>
     )}
