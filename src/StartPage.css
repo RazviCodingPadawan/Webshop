@@ -9,7 +9,7 @@
     width:100%;
     height: 100vh;
     background-image: url('./images/pink.jpg');
-    background-repeat: no-repeat;
+    background-repeat: cover !important;
     background-size: 100% 100%;
 }
 
@@ -20,12 +20,17 @@
     justify-content: center;
     text-align: center;
     animation-duration: 2s;
+    background-color: rgba(255, 239, 4, 0.8);
+    width: 60%;
+    height:55%;
+    margin-top: 5%;
+
 }
 
 .main_name {
-    font-size: 8vw;
-    color: #fff;
-    font-weight: 800;
+    font-size: 6vw;
+    color: #3a3a3a;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 10px;
     margin-top: 7%;
@@ -35,10 +40,11 @@
 .span {
     flex-direction: row;
     flex-wrap: wrap;
-    font-size: 4.5vw;
+    font-size: 2.7vw;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 6px;
     padding: 5px;
-    width: 65%;
+    width: 85%;
+    color: #3a3a3a;
 }

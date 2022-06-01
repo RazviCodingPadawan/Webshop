@@ -56,7 +56,8 @@
 
 @media only screen and (max-width : 991px) {
     .collapse {
-        background-color: rgba(117, 117, 117, 0.9);
+        background-color: rgba(117, 117, 117, 1);
+        padding-bottom: 15px;
   }
 
   .navbar-light .navbar-nav .nav-link {
