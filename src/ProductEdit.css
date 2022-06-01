@@ -1,31 +1,4 @@
-.picture_capture {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.edit_page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 25%;
-    padding: 0 20px;
-}
-
-.col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .bild_btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     margin: 15px 0;
 }
 
@@ -49,7 +22,42 @@ label {
 }
 
 .form-control {
-    width:550px;
+    width: 330px;
     padding: 20px;
     margin: 10px;
+}
+
+.img_capture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.image_edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn_edit_delete {
+    width: 330px;
+}
+
+.bottom_edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom_edit_select {
+    width: 330px;
+}
+
+.edit_save_btn {
+    margin: 20px 0;
 }

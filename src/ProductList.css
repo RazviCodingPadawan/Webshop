@@ -111,8 +111,8 @@ select option {
     justify-content: center;
     text-align: center;
     width: 350px;
-    min-height: 85vh;
-    padding: 20px 50px;
+    min-height: 90vh;
+    padding: 20px 60px;
     border: none;
 }
 

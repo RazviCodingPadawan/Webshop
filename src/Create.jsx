@@ -1,7 +1,7 @@
 import { useStates } from './utilities/states';
 import { captureImage, initializeMedia, uploadPicture } from './utilities/imageCapture';
 import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Container } from 'react-bootstrap';
 import './Create.css'
 
 const Create = () => {
@@ -61,7 +61,7 @@ const Create = () => {
 
 
   return (
-    <div className='create_product productList'>
+    <Container className="capture">
       <Form className='shadow-lg p-3 mb-5 bg-white rounded' onSubmit={SubmitData}>
         <video style={{ display: l.captureMode ? 'block' : 'none' }} autoPlay></video>
         <canvas width="320" height="240" style={{ display: !l.captureMode ? 'block' : 'none' }}></canvas>
@@ -78,7 +78,7 @@ const Create = () => {
 
         <Button className="btn_login create" type='submit'>CREATE</Button>
       </Form>
-    </div>
+    </Container>
   )
 }
 
