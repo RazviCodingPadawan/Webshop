@@ -53,6 +53,8 @@ const Create = () => {
     l.replaceImage && await uploadPicture(id);
     // Navigate to detail page
     navigate(`/backoffice/edit`);
+
+    window.location.reload(false);
   }
   function takeImage() {
     captureImage();
