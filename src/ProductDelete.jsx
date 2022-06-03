@@ -17,7 +17,7 @@ export default function ProductDelete() {
     // Delete from db
     await product.delete();
     // Navigate to detail page
-    navigate(`/backoffice/edit`);
+    navigate(`/backoffice/delete`);
 
     
     window.location.reload(false);

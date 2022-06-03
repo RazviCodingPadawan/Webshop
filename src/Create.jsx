@@ -3,10 +3,12 @@ import { captureImage, initializeMedia, uploadPicture } from './utilities/imageC
 import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 import './Create.css'
+import { useNavigate } from 'react-router-dom';
 
 const Create = () => {
 
   let s = useStates('main');
+  let navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [sortOrder, setSortOrder] = useState('name');
 
@@ -29,11 +31,13 @@ const Create = () => {
     let result = await (await fetch('/api/products', {
       method: "POST",
       headers: { 'Content-type': 'application/json' },
-      body: JSON.stringify(mobilData)
+      body: JSON.stringify(mobilData),
     })).json();
+    navigate(`/backoffice`);
+    window.location.reload(false);
     console.log(result)
-  }
 
+  }
   
   // a local state only for this component
   let l = useStates({
@@ -46,20 +50,12 @@ const Create = () => {
     initializeMedia();
   }, [])
 
-  async function save() {
-    // Save to db
-    await product.save();
-    // upload image if the image should be replaced
-    l.replaceImage && await uploadPicture(id);
-    // Navigate to detail page
-    navigate(`/backoffice/edit`);
-
-    window.location.reload(false);
-  }
   function takeImage() {
     captureImage();
     l.captureMode = false;
   }
+    
+
 
 
   return (
