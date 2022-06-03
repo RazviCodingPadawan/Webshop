@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './MainNav.css'
 import './MainNav.scss'
 import Logo from "./images/LOGO.png";
+import { Offline, Online } from "react-detect-offline";
 
 import {useStates} from './utilities/states';
 //import ShoppingCart from './ShoppingCart';
@@ -26,7 +27,11 @@ export default function MainNav() {
   // What is the smartest way to recreate that functionality
   // (adding an active CSS class to the active menu choice)
 
-  return <Navbar className="navbar" variant="light" expand="lg"fixed="top" >
+  return <Navbar className="navbar" variant="light" expand="lg" fixed="top" >
+      <div className='statusBar'>
+        <Online>🟢</Online>
+        <Offline>🔴</Offline>
+      </div>
             <Navbar.Brand className="logo_text" href="#home"><img src={Logo} style={{ height: 90 }} alt="logo" /></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
