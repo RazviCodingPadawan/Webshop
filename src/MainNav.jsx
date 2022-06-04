@@ -32,7 +32,7 @@ export default function MainNav() {
         <Online>🟢</Online>
         <Offline>🔴</Offline>
       </div>
-            <Navbar.Brand className="logo_text" href="#home"><img src={Logo} style={{ height: 90 }} alt="logo" /></Navbar.Brand>
+            <Navbar.Brand className="logo_text" href="#"><img src={Logo} style={{ height: 90 }} alt="logo" /></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
               <Nav className="mr-auto">

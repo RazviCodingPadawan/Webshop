@@ -3,7 +3,7 @@ import { captureImage, initializeMedia, uploadPicture } from './utilities/imageC
 import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 import './Create.css'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Create = () => {
 
@@ -60,7 +60,7 @@ const Create = () => {
 
   return (
     <Container className="capture">
-      <Row className="btn_login delete_btn"><Link to="/backoffice">⦑ Back</Link></Row>
+      <Button className="btn_login delete_btn"><Link to="/backoffice">⦑ Back</Link></Button>
       <Form className='shadow-lg p-3 mb-5 bg-white rounded capture' onSubmit={SubmitData}>
         <video style={{ display: l.captureMode ? 'block' : 'none' }} autoPlay></video>
         <canvas width="320" height="240" style={{ display: !l.captureMode ? 'block' : 'none' }}></canvas>
