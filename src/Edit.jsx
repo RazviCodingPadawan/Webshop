@@ -21,7 +21,7 @@ export default function Edit() {
 
   return <Container>
     <Row><h1>EDIT PAGE</h1></Row>
-    <Row className="btn_login delete_btn"><Link to="/backoffice">⦑ Back</Link></Row>
+    <Row className="btn_login delete_btn"><Link to="/backoffice">⦑ Bakåt</Link></Row>
     <Row className="mb-3"><Col><CategorySelect showAllOption bindTo={[s, 'chosenCategoryId']} /></Col></Row>
     {s.products.filter(product =>
       s.chosenCategoryId === 0 /*alla*/
@@ -34,7 +34,7 @@ export default function Edit() {
             </Col>
             <Row><p>{description}</p></Row>
             <Col className="col_price">
-                <Row><button className="btn_login edit_content" key={id} onClick={() => showDetail(id)}>EDIT</button></Row>
+                <Row><button className="btn_login edit_content" key={id} onClick={() => showDetail(id)}>ÄNDRA</button></Row>
                 <Row><p className="p_edit"><b>Pris:</b> {sweFormat(price)}</p></Row></Col>
             </Col>
     )}

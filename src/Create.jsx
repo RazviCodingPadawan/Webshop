@@ -60,7 +60,7 @@ const Create = () => {
 
   return (
     <Container className="capture">
-      <Button className="btn_login delete_btn"><Link to="/backoffice">⦑ Back</Link></Button>
+      <Button className="btn_login delete_btn"><Link to="/backoffice">⦑ Bakåt</Link></Button>
       <Form className='shadow-lg p-3 mb-5 bg-white rounded capture' onSubmit={SubmitData}>
         <video style={{ display: l.captureMode ? 'block' : 'none' }} autoPlay></video>
         <canvas width="320" height="240" style={{ display: !l.captureMode ? 'block' : 'none' }}></canvas>
@@ -75,7 +75,7 @@ const Create = () => {
         <label className='create_label'>Pris</label>
         <input className='create_input' value={mobilData.price} name="price" onChange={handleInputData} placeholder='Pris' />
 
-        <Button className="btn_login create" type='submit'>CREATE</Button>
+        <Button className="btn_login create" type='submit'>SKAPA</Button>
       </Form>
     </Container>
   )

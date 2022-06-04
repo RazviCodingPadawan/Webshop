@@ -12,12 +12,12 @@ export default function Backoffice() {
 
   return <Container>
     <div className="backoffice_container">
-      <h1>Welcome to backoffice</h1>
-      <h3>The place where shit happens 💩</h3>
+      <h1>Välkommen till backoffice</h1>
+      <h3>Där skiten händer 💩</h3>
       <div className="links_backoffice">
-        <Link className="btn_login backoffice_link" to="/backoffice/create">Create ⦒</Link>
-        <Link className="btn_login backoffice_link" to="/backoffice/edit">Edit ⦒</Link>
-        <Link className="btn_login backoffice_link" to="/backoffice/delete">Delete ⦒</Link>
+        <Link className="btn_login backoffice_link" to="/backoffice/create">Skapa ⦒</Link>
+        <Link className="btn_login backoffice_link" to="/backoffice/edit">Ändra ⦒</Link>
+        <Link className="btn_login backoffice_link" to="/backoffice/delete">Radera ⦒</Link>
       </div>
     </div>
   </Container>
