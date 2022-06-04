@@ -21,7 +21,7 @@ export default function Edit() {
 
   return <Container>
     <Row><h1>EDIT PAGE</h1></Row>
-    <Row className="btn btn-visa"><Link to="/backoffice">back ...</Link></Row>
+    <Row className="btn_login delete_btn"><Link to="/backoffice">⦑ Back</Link></Row>
     <Row className="mb-3"><Col><CategorySelect showAllOption bindTo={[s, 'chosenCategoryId']} /></Col></Row>
     {s.products.filter(product =>
       s.chosenCategoryId === 0 /*alla*/

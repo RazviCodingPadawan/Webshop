@@ -60,6 +60,7 @@ const Create = () => {
 
   return (
     <Container className="capture">
+      <Row className="btn_login delete_btn"><Link to="/backoffice">⦑ Back</Link></Row>
       <Form className='shadow-lg p-3 mb-5 bg-white rounded capture' onSubmit={SubmitData}>
         <video style={{ display: l.captureMode ? 'block' : 'none' }} autoPlay></video>
         <canvas width="320" height="240" style={{ display: !l.captureMode ? 'block' : 'none' }}></canvas>

@@ -20,7 +20,8 @@
 
 .delete_btn {
     margin: 40px 0;
-    width: 330px;
+    width: 250px;
+    text-align: center;
 }
 
 .h3_delete {
