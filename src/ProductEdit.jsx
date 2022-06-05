@@ -35,7 +35,7 @@ export default function ProductDetail() {
     // Upload image if the image should be replaced
     l.replaceImage && await uploadImage(id);
     // Navigate to detail page
-    navigate(`/product-detail/${id}`);
+    navigate(`/backoffice/edit`);
     window.location.reload(false);
   }
 
