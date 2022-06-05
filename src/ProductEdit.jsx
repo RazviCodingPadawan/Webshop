@@ -50,10 +50,10 @@ export default function ProductDetail() {
         <Row><Col>
           <video style={{ display: l.captureMode ? 'block' : 'none' }} autoPlay></video>
           <canvas width="320" height="240" style={{ display: !l.captureMode ? 'block' : 'none' }}></canvas>
-          <button className="btn btn-primary mt-3 mb-5" onClick={takeImage}>Capture</button>
+          <button className="btn btn-primary mt-3 mb-5" onClick={takeImage}>TA BILD</button>
         </Col></Row> : <Row><Col>
           <img src={`/images/products/${id}.jpg`} />
-          <button className="btn btn-primary mt-3 mb-5" onClick={() => l.replaceImage = true}>Replace image</button>
+          <button className="btn btn-primary mt-3 mb-5" onClick={() => l.replaceImage = true}>BYT BILD</button>
         </Col></Row>}
     <Row><Col><h1 className='edit_page_text'>{name}</h1></Col></Row>
     <Row><Col><p>{description}</p></Col></Row>
