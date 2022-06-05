@@ -2,11 +2,10 @@ import { useStates } from './utilities/states';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useParams, useNavigate } from "react-router-dom";
 import CategorySelect from './CategorySelect';
-import { captureImage, initializeMedia, uploadPicture } from './utilities/imageCapture';
+import { initializeMedia, captureImage, uploadImage } from './utilities/imageCapture';
 import { useState } from 'react';
-import './ProductEdit.css'
 
-export default function ProductEdit() {
+export default function ProductDetail() {
 
   let s = useStates('main');
   let { id } = useParams();
@@ -16,13 +15,13 @@ export default function ProductEdit() {
   let l = useStates({
     captureMode: true,
     replaceImage: false
-  })
+  });
 
   // initialize media (start talking to camera)
   // when the component loads
   useState(() => {
     initializeMedia();
-  }, [])
+  }, []);
 
 
   // find the correct product based on id
@@ -33,10 +32,11 @@ export default function ProductEdit() {
   async function save() {
     // Save to db
     await product.save();
-    // upload image if the image should be replaced
-    l.replaceImage && await uploadPicture(id);
+    // Upload image if the image should be replaced
+    l.replaceImage && await uploadImage(id);
     // Navigate to detail page
-    navigate(`/backoffice/edit`);
+    navigate(`/product-detail/${id}`);
+    window.location.reload(false);
   }
 
   function takeImage() {
@@ -45,16 +45,16 @@ export default function ProductEdit() {
   }
 
 
-  return <Container className="product_edit capture">
-    {l.replaceImage ?
-      <Row><Col>
-        <video style={{ display: l.captureMode ? 'block' : 'none' }} autoPlay></video>
-        <canvas width="300" height="240" style={{ display: !l.captureMode ? 'block' : 'none' }}></canvas>
-        <button className='btn_login' onClick={(takeImage)}>Ta bild</button>
-      </Col></Row> : <Row><Col>
-        <img className='img_capture' src={`/images/products/${id}.jpg`} />
-        <button className='btn_login' onClick={() => l.replaceImage = true}>Byt bilden</button>
-      </Col></Row>} 
+  return <Container className="product-edit">
+{l.replaceImage ?
+        <Row><Col>
+          <video style={{ display: l.captureMode ? 'block' : 'none' }} autoPlay></video>
+          <canvas width="320" height="240" style={{ display: !l.captureMode ? 'block' : 'none' }}></canvas>
+          <button className="btn btn-primary mt-3 mb-5" onClick={takeImage}>Capture</button>
+        </Col></Row> : <Row><Col>
+          <img src={`/images/products/${id}.jpg`} />
+          <button className="btn btn-primary mt-3 mb-5" onClick={() => l.replaceImage = true}>Replace image</button>
+        </Col></Row>}
     <Row><Col><h1 className='edit_page_text'>{name}</h1></Col></Row>
     <Row><Col><p>{description}</p></Col></Row>
     <Row><Col><p>Pris: {price}</p></Col></Row>
@@ -79,6 +79,6 @@ export default function ProductEdit() {
         <CategorySelect bindTo={[product, 'categoryId']} />
       </label>
     </Col></Row>
-    <button type="button" onClick={save} className="btn_login edit_save_btn">Spara</button>   
+    <button type="button" onClick={save} className="btn_login edit_save_btn">Spara</button>  
   </Container>
 }

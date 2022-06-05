@@ -1,5 +1,5 @@
 import { useStates } from './utilities/states';
-import { captureImage, initializeMedia, uploadPicture } from './utilities/imageCapture';
+import { captureImage, initializeMedia, uploadPicture } from './utilities/imageCapture2';
 import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 import './Create.css'
@@ -50,6 +50,16 @@ const Create = () => {
     initializeMedia();
   }, [])
 
+    async function save() {
+    // Save to db
+    await product.save();
+    // Upload image if the image should be replaced
+   await uploadPicture(id);
+    // Navigate to detail page
+    navigate(`/product-detail/${id}`);
+  }
+
+
   function takeImage() {
     captureImage();
     l.captureMode = false;
@@ -59,13 +69,9 @@ const Create = () => {
 
 
   return (
-    <Container className="capture">
+    <Container className="product-create">
       <Button className="btn_login delete_btn"><Link to="/backoffice">⦑ Bakåt</Link></Button>
       <Form className='shadow-lg p-3 mb-5 bg-white rounded capture' onSubmit={SubmitData}>
-        <video style={{ display: l.captureMode ? 'block' : 'none' }} autoPlay></video>
-        <canvas width="320" height="240" style={{ display: !l.captureMode ? 'block' : 'none' }}></canvas>
-        <button className='btn btn-primary mt-3 mb-5' onClick={(takeImage)}>Ta bild</button>
-
         <label className='create_label'>Namn</label>
         <input className='create_input' value={mobilData.name} name="name" onChange={handleInputData} placeholder='Namn' />
 
@@ -75,7 +81,11 @@ const Create = () => {
         <label className='create_label'>Pris</label>
         <input className='create_input' value={mobilData.price} name="price" onChange={handleInputData} placeholder='Pris' />
 
-        <Button className="btn_login create" type='submit'>SKAPA</Button>
+        <video style={{ display: l.captureMode ? 'block' : 'none' }} autoPlay></video>
+        <canvas width="320" height="240" style={{ display: !l.captureMode ? 'block' : 'none' }}></canvas>
+        <button className='btn btn-primary mt-3 mb-5' onClick={takeImage}>Ta bild</button>
+
+        <Button className="btn_login create" type='submit' onClick={save} onSubmit={SubmitData}>SKAPA</Button>
       </Form>
     </Container>
   )
