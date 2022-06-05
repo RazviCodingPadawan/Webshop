@@ -26,7 +26,6 @@
     width: 60%;
     height:55%;
     margin-top: 5%;
-
 }
 
 .main_name {
@@ -49,4 +48,21 @@
     padding: 5px;
     width: 85%;
     color: #3a3a3a;
+}
+
+@media only screen and (max-width : 991px) {
+    .main_text {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .main_name {
+        font-size: 8vw;
+    }
+
+    .span {
+        font-size: 4.5vw;
+        padding: 7px;
+        width: 90%;
+    }
 }
