@@ -138,3 +138,13 @@ select option {
 .btn-visa:hover {
     border: 1px solid #757676;
 }
+
+@media only screen and (max-width : 991px) {
+    .search_select {
+        margin: 0;
+    }
+    
+    .card {
+        margin: 0;
+    }
+}

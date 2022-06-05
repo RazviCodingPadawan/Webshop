@@ -2,7 +2,17 @@
     margin-top: 17%;
 }
 
-
 .btn {
     margin-top: 30px;
+}
+
+.shopping_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_shop {
+    margin: 30px 0;
 }

@@ -76,3 +76,25 @@ a {
 a:hover {
     color: #E97673;
 }
+
+.edit_btn {
+    width: 200px;
+    margin: 25px 0;
+}
+
+.edit_select {
+    margin-top: 50px;
+}
+
+.price_detal {
+    margin: 15px 0;
+    font-size: 2vw;
+    color:#E97673;
+}
+
+
+@media only screen and (max-width : 991px) {
+    .price_detal {
+        font-size: 6.5vw;
+    }
+}
