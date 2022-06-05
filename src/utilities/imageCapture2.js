@@ -1,4 +1,4 @@
-// A variable to save the taken picture in 
+// a variable to save the taken picture in 
 let picture;
 
 function dataURItoBlob(dataURI) {
@@ -15,13 +15,13 @@ function dataURItoBlob(dataURI) {
 
 export async function initializeMedia() {
 
-  let videoPlayer = document.querySelector('.product-edit video');
-  let canvasElement = document.querySelector('.product-edit canvas');
+  let videoPlayer = document.querySelector('.product-create video');
+  let canvasElement = document.querySelector('.product-create canvas');
 
   // if the elements do not exist yet, retry in 10 ms...
   if (!videoPlayer || !canvasElement) {
     setTimeout(initializeMedia, 10);
-    return;
+    return
   }
 
   if (!('mediaDevices' in navigator)) {
@@ -59,8 +59,8 @@ export async function initializeMedia() {
 
 export function captureImage() {
 
-  let videoPlayer = document.querySelector('.product-edit video');
-  let canvasElement = document.querySelector('.product-edit canvas');
+  let videoPlayer = document.querySelector('.product-create video');
+  let canvasElement = document.querySelector('.product-create canvas');
 
   // take the image from the videoplayer and add to the canvas
   // to enable converting the image to a blob (file)
@@ -77,16 +77,16 @@ export function captureImage() {
   picture = dataURItoBlob(canvasElement.toDataURL('image/jpeg', 0.8));
 }
 
-export async function uploadImage(productId) {
+export async function uploadPicture(productId) {
+  
+  let formData = new FormData()
 
-  let formData = new FormData();
-
-  formData.append('file', picture, Date.now() + '.jpg');
+  formData.append('file', picture, Date.now() + '.jpg')
 
   // TEMPORARILY DO NOT USE fetchedLocation
-  // (since it would take some more analyzing of original code example)
-  // formData.append('location', JSON.stringify(fetchedLocation));
-  // formData.append('address', JSON.stringify(address));
+  // (since it woul take some more analyzing of original code example)
+  // formData.append('location', JSON.stringify(fetchedLocation))
+  // formData.append('address', JSON.stringify(address))
 
   formData.append('id', productId);
 
@@ -97,4 +97,5 @@ export async function uploadImage(productId) {
 
   // to check what the server answers
   // console.log(response)
+
 }
