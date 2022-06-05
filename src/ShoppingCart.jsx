@@ -18,7 +18,7 @@ export default function ShoppingCart() {
     save();
   });
 
-  return <Container className="shoppingCart">
+  return <Container className="container">
     <Row><Col>
       <h1>Shopping vagn</h1>
     </Col></Row>
@@ -27,7 +27,7 @@ export default function ShoppingCart() {
         {s.cartContents.length ? <table className="table">
           <thead>
             <tr>
-              <th>Produkt namn</th>
+              <th colSpan={2}>Produkt namn</th>
               <th className="text-end">Antal</th>
               <th className="text-end">Pris</th>
               <th className="text-end">Total/Pris</th>
@@ -38,7 +38,7 @@ export default function ShoppingCart() {
               <td style={{ cursor: 'pointer' }} onClick={() => remove(row.product)}>🗑️</td>
               <td>{row.product.name}</td>
               <td className="text-end">
-                <input className="text-end" style={{ width: 50 }} type="number" min={1} max={100} {...row.bind('quantity')} />
+                <input className="text-end" style={{ width: 100 }} type="number" min={1} max={100} {...row.bind('quantity')} />
               </td>
               <td className="text-end" style={{ width: 100 }}>{sweFormat(row.product.price)}</td>
               <td className="text-end" style={{ width: 100 }}>{sweFormat(row.quantity * row.product.price)}</td>
@@ -54,9 +54,9 @@ export default function ShoppingCart() {
       </Col>
     </Row>
     <Row>
-      <Col>
+      <Col className="shopping_buttons">
         <Link className="float-end text-decoration-none" to={`/product-list`}>
-          <button type="button" className="btn_login">Tillbaka</button>
+          <button type="button" className="btn_login btn_shop">Tillbaka</button>
         </Link>
         {s.cartContents.length ? <button onClick={empty} type="button" className="btn_login btn-primary float-end me-3">Töm kundvagnen</button> : <></>}
       </Col>

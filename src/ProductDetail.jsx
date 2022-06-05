@@ -44,18 +44,18 @@ export default function ProductDetail() {
   }
 
   return <Container>
-      <Row><h1 className="mb-3">{name}</h1></Row>
+      <Row><h1 className="mb-3 detal_name">{name}</h1></Row>
       <Row><h4>Kategori: {categoryName}</h4></Row>
-      <Row><img onError={event => missingImage(event, name)} className="float-end ms-4" style={{ width: 500, height: 500, objectFit: 'contain' }} src={`/images/products/${id}.jpg?${Math.random()}`} /></Row>
+      <Row><img onError={event => missingImage(event, name)} className="float-end ms-4 img_detal" style={{ width: 400, height: 400, objectFit: 'contain' }} src={`/images/products/${id}.jpg?${Math.random()}`} /></Row>
       <Row><p>{description}</p></Row>
-      <Row><p><b>Pris: {sweFormat(price)}</b></p></Row>
+      <Row><p className="price_detal"><b>Pris: {sweFormat(price)}</b></p></Row>
       <Row><Col className="mb-3 bottom">
-        <button type="button" onClick={buy} className="btn_login">Köp</button>
+        <button type="button" onClick={buy} className="btn_login btn_detal">Köp</button>
         <input style={{ width: 140 }} className="float-end mt-3 me-6" type="number" {...localState.bind('buyQuantity')} />
       </Col></Row>
       <Col>
       <Link to={`/product-list`}>
-        <button type="button" className="btn_login detail_btn">Tillbaka</button>
+        <button type="button" className="btn_login btn_detal">Tillbaka</button>
         <hr />
       </Link>
     </Col>
